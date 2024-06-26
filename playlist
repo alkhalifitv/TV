@@ -296,3 +296,10 @@ http://dikcfc9915kp8.cloudfront.net/hls/main.m3u8
 #EXTINF:-1 tvg-id="FightNetwork" tvg-name=Fight Network" tvg-logo="https://alkhalifitv.github.io/TV/big/fightnetwork.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/olahraga.png" group-title="OLAH RAGA",Fight Network
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 http://d12a2vxqkkh1bo.cloudfront.net/hls/main.m3u8
+
+#EXTINF:-1 tvg-id="TSports" tvg-name="TSports" tvg-logo="https://alkhalifitv.github.io/TV/big/tsports.png" group-title="OLAH RAGA",TSports Copa Amerika 2024 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+https://hdstreamz.vip/tsportshd/stream.php?stream=https://live-cdn.tsports.com/live-01/master_1080.m3u8
+
+#EXTINF:-1 tvg-id="TSports2" tvg-name="TSports2" tvg-logo="https://alkhalifitv.github.io/TV/big/tsports.png" group-title="OLAH RAGA",TSports 2 Euro 2024 HD
+https://hdstreamz.vip/tsportshd/stream.php?stream=https://live-cdn.tsports.com/live-02/master_1080.m3u8

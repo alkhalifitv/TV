@@ -2,7 +2,7 @@
 
 #EXTINF:-1 tvg-id="TransTV.id" tvg-name="Trans TV" tvg-logo="https://alkhalifitv.github.io/TV/big/transtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",TRANS TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-https://video.detik.com/transtv/smil:transtv.smil/playlist.m3u8
+http://livestream.transtv.co.id/stream/live/ttv.m3u8
 
 #EXTINF:-1 tvg-id="tvOne.id" tvg-name="tvOne" tvg-logo="https://alkhalifitv.github.io/TV/big/tvone.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",TVONE HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36

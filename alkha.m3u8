@@ -1,4 +1,4 @@
-#EXTM3U x-tvg-url="https://bit.ly/alkhalifitvepg,"refresh="1440" max-conn="1" refresh="24"
+#EXTM3U x-tvg-url="https://bit.ly/alkhaepg1"refresh="1440" max-conn="1" refresh="24"
 
 #EXTINF:-1 tvg-id="cub: TransTV.id" tvg-name="cub: Trans TV" tvg-logo="https://alkhalifitv.github.io/TV/big/transtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",TRANS TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36

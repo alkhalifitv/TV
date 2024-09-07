@@ -25,7 +25,7 @@ https://dsgtq5sngxkde.cloudfront.net/live/eds/MNCTV-HD/sa_dash_vmx/MNCTV-HD.mpd
 https://streaming.indihometv.com/atm/DASH/indosiar/manifest.mpd
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=5eaddccd893a47ac8b65f9b31963a3ae881afa67ea57b41c1822d745d67559e6
+#KODIPROP:inputstream.adaptive.license_key=5eaddccd893a47ac8b65f9b31963a3ae:881afa67ea57b41c1822d745d67559e6
 #EXTINF:-1 tvg-id="cub: Indosiar.id" tvg-name="cub: Indosiar" tvg-logo="https://alkhalifitv.github.io/TV/big/indosiar.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",INDOSIAR HD
 https://atemecdnbalancer-voe.sysln.id/live/eds/IndosiarHD/mpd/IndosiarHD.mpd
 
@@ -52,8 +52,8 @@ https://video.detik.com/trans7/smil:trans7.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-id="cub: GTV.id" tvg-name="cub: GTV" tvg-logo="https://alkhalifitv.github.io/TV/big/gtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",GTV HD
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=NWFkYWNhMzctNzc0Yy0zYTBiLWFiOGYtODMxYzM2YWM1MDg4
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=88f6c7cbd793374cb5f12d7e26dcd63b:e82daa7c7bfb03d99327463fdbd37336
 https://dsgtq5sngxkde.cloudfront.net/live/eds/GTV-HD/sa_dash_vmx/GTV-HD.mpd
 
 #EXTINF:-1 tvg-id="cub: RajawaliTV.id" tvg-name="cub: RajawaliTV.id" tvg-logo="https://alkhalifitv.github.io/TV/big/rtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",RTV
@@ -78,8 +78,8 @@ https://cdn08jtedge.indihometv.com/dassdvr/134/mentaritv/manifest.mpd
 
 #EXTINF:-1 tvg-id="cub: iNews.id" tvg-name="cub: iNews" tvg-logo="https://alkhalifitv.github.io/TV/big/inews.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",INEWS
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=NWFkYWNhMzctNzc0Yy0zYTBiLWFiOGYtODMxYzM2YWM1MDg4
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a31cf5136789514b7e12b9cc99307c84:980e54d671ffc2b2f4cf54e75cae0ac2
 https://dsgtq5sngxkde.cloudfront.net/live/eds/iNewsTV-HDD/sa_dash_vmx/iNewsTV-HDD.mpd
 
 #EXTINF:-1 tvg-id="cub: CNNIndonesia.id" tvg-name="cub: CNN Indonesia" tvg-logo="https://alkhalifitv.github.io/TV/big/cnnindonesia.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",CNN Indonesia
@@ -138,31 +138,31 @@ http://cdn01-telkomsel-01.akamaized.net/Content/DASH/Live/channel(c99739b1-0748-
 http://op-group1-swiftservesd-1.dens.tv/h/h191/index.m3u8
 
 #EXTINF:-1 tvg-id="AnimaxAsiaHD.sg" tvg-name="Animax Asia HD" tvg-logo="https://alkhalifitv.github.io/TV/big/animax.png" group-title="ANAK",Animax Asia
-#EXTVLCOPT:http-referrer=https://useetvwv.visionplus.id
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=NWFkYWNhMzctNzc0Yy0zYTBiLWFiOGYtODMxYzM2YWM1MDg4
-https://dsgtq5sngxkde.cloudfront.net/live/eds/Animax/sa_dash_vmx/Animax.mpd
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ecc5bc0e2dec4b9495db147278fb3904:ca86d9fdad6a8e9b1c13368d734e2095
+https://atemeshield1-voe.sysln.id/live/eds/AnimaxHD/mpd/AnimaxHD.mpd
 	
 #EXTINF:-1 tvg-id="AniplusAsiaHD.sg" tvg-name="Aniplus Asia HD" tvg-logo="https://alkhalifitv.github.io/TV/big/aniplus.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",ANIPLUS
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 http://op-group1-swiftservehd-1.dens.tv/h/h201/index.m3u8
 
 #EXTINF:-1 tvg-id="mnc: HITS.sg" tvg-name="mnc: HITS" tvg-logo="https://alkhalifitv.github.io/TV/big/hits.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",Hits
-#EXTVLCOPT:http-referrer=https://useetvwv.visionplus.id
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=NWFkYWNhMzctNzc0Yy0zYTBiLWFiOGYtODMxYzM2YWM1MDg4
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=78d17d4851a5e9eede96f283b15ec053:c5ae33f70cc967fe107b35eb7225f52a
 https://dsgtq5sngxkde.cloudfront.net/live/eds/HITS/sa_dash_vmx/HITS.mpd
 
 #EXTINF:-1 tvg-id="mnc: HITSMovies.sg" tvg-name="mnc: HITS Movies" tvg-logo="https://alkhalifitv.github.io/TV/big/hitsmovies.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",HITS Movies
-#EXTVLCOPT:http-referrer=https://useetvwv.visionplus.id
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=NWFkYWNhMzctNzc0Yy0zYTBiLWFiOGYtODMxYzM2YWM1MDg4
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=5d9684b1737e3b68801b4cff7225d4bb:902e7634820c26a8ff36f3708f0191d4
 https://dsgtq5sngxkde.cloudfront.net/live/eds/HitsMovies/sa_dash_vmx/HitsMovies.mpd
 
 #EXTINF:-1 tvg-id="mnc: ZeeBioskop.id" tvg-name="mnc: Zee Bioskop" tvg-logo="https://alkhalifitv.github.io/TV/big/zbioskop.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",Zee Bioskop
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=NWFkYWNhMzctNzc0Yy0zYTBiLWFiOGYtODMxYzM2YWM1MDg4
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=9e7df70530006bef067327cefde82c0e":b92b6a2aba522bd9bb2d07cf241e7398
 https://dsgtq5sngxkde.cloudfront.net/live/eds/ZeeBIOSKOP/sa_dash_vmx/ZeeBIOSKOP.mpd
 
 #EXTINF:-1 tvg-id="mnc: CelestialMoviesIndonesia.id" tvg-name="mnc: CelestialMoviesIndonesia.id" tvg-logo="https://alkhalifitv.github.io/TV/big/cm.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",Celestial Movies Indonesia
@@ -185,7 +185,7 @@ http://op-group1-swiftservesd-1.dens.tv/s/s34/01.m3u8
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.ptmnc01.verspective.net/?deviceId=NWFkYWNhMzctNzc0Yy0zYTBiLWFiOGYtODMxYzM2YWM1MDg4
-https://melon-live-cdn.mncnow.id/live/eds/CinemaWorld/sa_dash_vmx/CinemaWorld.mpd
+https://dsgtq5sngxkde.cloudfront.net/live/eds/CinemaWorld/sa_dash_vmx/CinemaWorld.mpd
 
 #EXTINF:-1 tvg-id="mnc: MyCinema.id" tvg-name="mnc: My Cinema" tvg-logo="https://alkhalifitv.github.io/TV/big/mycinema.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",My Cinema
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36

@@ -15,13 +15,6 @@ http://op-group1-swiftservehd-1.dens.tv/h/h40/index.m3u8
 #EXTINF:-1 tvg-id="ANTV.id" tvg-name="ANTV.id" tvg-logo="https://alkhalifitv.github.io/TV/big/antv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",ANTV
 https://d84q7nw4qf3j3.cloudfront.net/out/v1/0a6c6b1534444ab4bd903af8761e6747/index.mpd
 
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=b4899559135b490d98a892c1d6a45e20:6b5feff6a7242dc4b4345bedb84c2181
-#EXTINF:-1 tvg-id="ANTV.id" tvg-name="ANTV.id" tvg-logo="https://alkhalifitv.github.io/TV/big/antv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",ANTV
-https://atemecdnbalancer-voe.sysln.id/live/eds/ANTV/mpd/ANTV.mpd
-
 #EXTINF:-1 tvg-id="MNCTV.id" tvg-name="MNCTV" tvg-logo="http://alkhalifitv.github.io/TV/big/mnctv.png" group-title="LOKAL",MNCTV
 #EXTVLCOPT:http-referrer=https://www.visionplustv.id/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; SM-G9980) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36
@@ -86,7 +79,13 @@ https://gtv-cutv.rctiplus.id/gtv-sdi.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0 
 http://op-group1-swiftservehd-1.dens.tv/h/h10/index.m3u8
 
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0#EXTVLCOPT:http-referrer=https://www.visionplustv.id/
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=91dec6fd9fd84b879aacc027bf532790:588a2214bfb91fc0150b9ac2a745cef8
 #EXTINF:-1 tvg-id="MDTV.id" tvg-name="MDTV.id" tvg-logo="https://alkhalifitv.github.io/TV/big/mdtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",MDTV HD
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/3aefa03d32954b678e5faab6daa04b58/index.mpd
+
+#EXTINF:-1 tvg-id="MDTV.id" tvg-name="MDTV.id" tvg-logo="https://alkhalifitv.github.io/TV/big/mdtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",MDTV
 #EXTVLCOPT:http-user-agent=DENSGO/3.00.00 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1
 #EXTVLCOPT:http-referrer=http://dens.tv
 http://op-group1-swiftservesd-1.dens.tv/h/h06/01.m3u8
@@ -107,7 +106,7 @@ http://op-group1-swiftservehd-1.dens.tv/h/h207/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 https://cdn08jtedge.indihometv.com/dassdvr/134/mentaritv/manifest.mpd
 
-#EXTINF:-1 tvg-id="atv.id" tvg-name="ATV" tvg-logo="http://alkhalifitv.github.io/TV/big/atv.png" group-title="HIBURAN",ATV
+#EXTINF:-1 tvg-id="atv.id" tvg-name="atv" tvg-logo="http://alkhalifitv.github.io/TV/big/atv.png" group-title="HIBURAN",ATV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 https://streaming.indihometv.com/atm/DASH/atv/manifest.mpd
 

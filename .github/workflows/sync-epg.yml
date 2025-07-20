@@ -1,30 +1,50 @@
-name: Sync EPG from private repo
+name: Update EPG from Private Repo
 
 on:
   schedule:
-    - cron: "0 */6 * * *"  # Setiap 6 jam
+    - cron: '0 0 * * *' # setiap hari tengah malam, bisa disesuaikan
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
-  sync-epg:
+  update-epg:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo ini
+      - name: Checkout Public Repo (this repo)
         uses: actions/checkout@v4
 
-      - name: Clone repo private epg
-        run: |
-          git clone https://alkhalifitv:${{ secrets.EPG_TOKEN }}@github.com/alkhalifitv/epg.git epg-private
+      - name: Checkout Private Repo (alkhalifitv.github.io)
+        uses: actions/checkout@v4
+        with:
+          repository: alkhalifitv/alkhalifitv.github.io
+          token: ${{ secrets.EPG_TOKEN }} 
+          path: private-repo
 
-      - name: Salin file XML.gz ke folder publik
+      - name: Copy EPG file to epg folder
         run: |
           mkdir -p epg
-          cp -v epg-private/guide/global/idn.xml.gz epg/idn.xml.gz
+          cp private-repo/guide/global/guide.xml.gz epg/
 
-      - name: Commit perubahan
+      - name: Commit and Push changes
         run: |
           git config user.name "alkhalifitv"
           git config user.email "backtrack512@gmail.com"
-          git add epg/idn.xml.gz
-          git commit -m "Sync EPG from private repo" --no-verify || echo "Nothing to commit"
-          git push
+          git add epg/guide.xml.gz
+          git commit -m "Update guide.xml.gz from private repo" --no-verify || echo "No changes to commit"
+          git push origin master
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './epg'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

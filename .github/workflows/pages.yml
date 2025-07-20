@@ -37,7 +37,7 @@ jobs:
           git config user.name "alkhalifitv"
           git config user.email "backtrack512@gmail.com"
           git add epg/
-          git diff --cached --quiet || git commit -m "Update EPG dan Deploy Pages" --no-verify
+          git diff --cached --quiet || git commit -m "Update EPG Berhasil " --no-verify
           git push origin master
 
       - name: Setup Python & Markdown

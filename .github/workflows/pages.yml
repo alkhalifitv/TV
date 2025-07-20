@@ -31,7 +31,7 @@ jobs:
           cp -r logo deploy/ || echo "No logo folder found"
           cp -r playlist deploy/ || echo "No playlist folder found"
           cp -r big deploy/ || echo "No big folder found"
-          cp README.md deploy/ || echo "No README.md found"
+          cp README.md deploy/ || echo "No README.md"
 
       - name: Convert README.md to index.html
         run: |

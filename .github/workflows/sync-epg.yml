@@ -1,4 +1,4 @@
-name: Update and Deploy EPG every 2 days
+name: Update dan Deploy EPG setiap 2 hari
 
 on:
   schedule:

@@ -2,7 +2,7 @@ name: Deploy Full TV Repo to GitHub Pages
 
 on:
   push:
-    branches: [ master ]  
+    branches: [ master ]  # atau main, sesuaikan branch kamu
   workflow_dispatch:
 
 permissions:
@@ -19,34 +19,24 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node (if perlu update EPG with node)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '16.x'  # atau sesuai kebutuhan
-
-      - name: Setup Python (kalau perlu)
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'  # sesuaikan
+          python-version: '3.12'
 
-      # Optional: langkah generate/update EPG, kalau ada skripnya
-      # - name: Generate/update EPG
-      #   run: |
-      #     python3 scripts/index.py -zo guide.xml --source="scripts/main/main.txt" --gen-name="ALKHALIFI-TV" --gen-url="alkhalifitv.github.io"
-      #     gzip -f guide.xml
-      #     mv guide.xml.gz guide/global/
-
-      - name: Prepare artifact directory
+      - name: Prepare deploy folder
         run: |
           mkdir -p deploy
-          # Copy semua file & folder penting ke folder deploy
-          cp -r epg deploy/ || echo "No epg folder"
-          cp -r logo deploy/ || echo "No logo folder"
-          cp -r playlist deploy/ || echo "No playlist folder"
-          cp -r big deploy/ || echo "No big folder"
-          cp -r other_folder_if_any deploy/ || echo "No other_folder_if_any"
-          # Kalau ada file di root yang mau di deploy juga, bisa copy ke deploy juga
-          # cp README.md deploy/ || echo "No README.md"
+          cp -r epg deploy/ || echo "No epg folder found"
+          cp -r logo deploy/ || echo "No logo folder found"
+          cp -r playlist deploy/ || echo "No playlist folder found"
+          cp -r big deploy/ || echo "No big folder found"
+          # Tambah folder lain yang mau di-include, misal:
+          # cp -r other_folder deploy/ || echo "No other_folder"
+
+      - name: Generate index.html for deploy folder
+        run: |
+          python3 scripts/gen_index.py
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -56,4 +46,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

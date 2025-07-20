@@ -27,11 +27,18 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Prepare epg folder
+        run: |
+          mkdir -p epg
+          cp -v global/*.xml.gz epg/ 2>/dev/null || echo "No global XML files to copy"
+          cp -v local/*.xml.gz epg/ 2>/dev/null || echo "No local XML files to copy"
+          ls -lh epg || echo "Folder epg is empty"
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # ✅ versi baru, fix error
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: './epg'  # ⬅️ pastikan file XML.gz hasil generate ada di sini
+          path: './epg'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4  # ✅ versi baru
+        uses: actions/deploy-pages@v4

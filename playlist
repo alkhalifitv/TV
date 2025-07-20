@@ -1,4 +1,4 @@
-#EXTM3U x-tvg-url="https://github.com/alkhalifitv/TV/raw/refs/heads/master/epg/guide.xml.gz, https://github.com/alkhalifitv/TV/raw/refs/heads/master/epg/idn.xml.gz"refresh="1440" max-conn="1" refresh="24"
+#EXTM3U x-tvg-url="https://alkhalifitv.github.io/TV/epg/guide.xml.gz, https://alkhalifitv.github.io/TV/epg/idn.xml.gz"refresh="1440" max-conn="1" refresh="24"
 
 #EXTINF:-1 tvg-id="TransTV.id" tvg-name="Trans TV" tvg-logo="https://alkhalifitv.github.io/TV/big/transtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",TRANS TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36

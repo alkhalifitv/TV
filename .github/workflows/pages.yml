@@ -1,8 +1,8 @@
-name: Auto Deploy GitHub Pages
+name: Deploy Full TV Repo to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master ]  
   workflow_dispatch:
 
 permissions:
@@ -10,47 +10,50 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Generate index.html
-        run: |
-          cat > index.html <<EOF
-          <!DOCTYPE html>
-          <html>
-          <head><meta charset="UTF-8"><title>EPG Index</title></head>
-          <body>
-            <h1>📺 EPG & Playlist</h1>
-            <ul>
-              <li><a href="epg/guide.xml.gz">guide.xml.gz</a></li>
-              <li><a href="epg/idn.xml.gz">idn.xml.gz</a></li>
-              <li><a href="playlist">Playlist (m3u)</a></li>
-              <li><a href="logo">Logo Folder</a></li>
-            </ul>
-          </body>
-          </html>
-          EOF
+      - name: Setup Node (if perlu update EPG with node)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16.x'  # atau sesuai kebutuhan
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Setup Python (kalau perlu)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'  # sesuaikan
+
+      # Optional: langkah generate/update EPG, kalau ada skripnya
+      # - name: Generate/update EPG
+      #   run: |
+      #     python3 scripts/index.py -zo guide.xml --source="scripts/main/main.txt" --gen-name="ALKHALIFI-TV" --gen-url="alkhalifitv.github.io"
+      #     gzip -f guide.xml
+      #     mv guide.xml.gz guide/global/
+
+      - name: Prepare artifact directory
+        run: |
+          mkdir -p deploy
+          # Copy semua file & folder penting ke folder deploy
+          cp -r epg deploy/ || echo "No epg folder"
+          cp -r logo deploy/ || echo "No logo folder"
+          cp -r playlist deploy/ || echo "No playlist folder"
+          cp -r big deploy/ || echo "No big folder"
+          cp -r other_folder_if_any deploy/ || echo "No other_folder_if_any"
+          # Kalau ada file di root yang mau di deploy juga, bisa copy ke deploy juga
+          # cp README.md deploy/ || echo "No README.md"
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'  # deploy semua isi repo termasuk index.html
+          path: './deploy'
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

@@ -2,9 +2,7 @@ name: deploy-to-github-pages
 
 on:
   push:
-    branches: [ master ]
-    paths:
-      - 'epg/**'         
+    branches: [ master ] # Ganti kalau pakai main
   workflow_dispatch:
 
 permissions:
@@ -29,15 +27,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Prepare epg folder
-        run: |
-          mkdir -p epg
-          ls -lh epg || echo "Folder epg is empty"
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './epg'
+          path: './'  # Kirim semua file di repo
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -1,52 +1,74 @@
-name: Deploy Full TV Repo ke GitHub
+name: Sync EPG dan Deploy ke GitHub Pages
 
 on:
-  push:
-    branches: [ master ]  # atau main, sesuaikan branch kamu
+  schedule:
+    - cron: '30 22 */2 * *'   # Setiap 2 hari sekali jam 05:30 WIB
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 jobs:
-  deploy:
+  sync-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
+
     steps:
-      - name: Checkout repo
+      - name: Checkout public repo (repo ini)
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Checkout private repo (EPG)
+        uses: actions/checkout@v4
+        with:
+          repository: alkhalifitv/alkhalifitv.github.io
+          token: ${{ secrets.EPG_TOKEN }}
+          path: private-repo
+
+      - name: Copy EPG files ke folder epg/
+        run: |
+          mkdir -p epg
+          cp -v private-repo/guide/global/guide.xml.gz epg/ || echo "guide.xml.gz not found"
+          cp -v private-repo/guide/global/idn.xml.gz epg/ || echo "idn.xml.gz not found"
+          ls -lh epg
+
+      - name: Commit dan push jika ada perubahan
+        run: |
+          git config user.name "alkhalifitv"
+          git config user.email "backtrack512@gmail.com"
+          git add epg/
+          git diff --cached --quiet || git commit -m "Update EPG dan Deploy Pages" --no-verify
+          git push origin master
+
+      - name: Setup Python & Markdown
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Prepare deploy folder
+      - name: Install markdown untuk konversi README
+        run: pip install markdown
+
+      - name: Siapkan folder deploy
         run: |
           mkdir -p deploy
-          cp -r epg deploy/ || echo "No epg folder found"
-          cp -r logo deploy/ || echo "No logo folder found"
-          cp -r playlist deploy/ || echo "No playlist folder found"
-          cp -r big deploy/ || echo "No big folder found"
+          cp -r epg deploy/ || echo "No epg folder"
+          cp -r logo deploy/ || echo "No logo folder"
+          cp -r playlist deploy/ || echo "No playlist folder"
+          cp -r big deploy/ || echo "No big folder"
           cp README.md deploy/ || echo "No README.md"
 
-      - name: Convert README.md to index.html
+      - name: Convert README.md ke index.html
         run: |
-          pip install markdown
-          markdown deploy/README.md > deploy/index.html || echo "Failed to convert README.md"
+          markdown deploy/README.md > deploy/index.html || echo "README convert failed"
 
-      - name: Generate index.html for deploy folder (listing files)
-        run: |
-          python3 scripts/gen_index.py
+      - name: Generate index listing dari isi deploy/
+        run: python3 scripts/gen_index.py
 
-      - name: Upload pages artifact
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './deploy'
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy ke GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

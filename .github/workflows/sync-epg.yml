@@ -2,8 +2,7 @@ name: Update and Deploy EPG every 2 days
 
 on:
   schedule:
-    # Cron setiap 2 hari sekali pukul 01:00 UTC (sesuaikan waktu kamu)
-    - cron: '0 5 */2 * *'
+    - cron: '0 5 */2 * *'   # Jalan tiap 2 hari
   workflow_dispatch:
 
 permissions:
@@ -14,31 +13,30 @@ permissions:
 jobs:
   update-epg:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Public Repo (this repo)
+      - name: Checkout public repo (this repo)
         uses: actions/checkout@v4
 
-      - name: Checkout Private Repo (alkhalifitv.github.io)
+      - name: Checkout private repo (alkhalifitv.github.io)
         uses: actions/checkout@v4
         with:
           repository: alkhalifitv/alkhalifitv.github.io
           token: ${{ secrets.EPG_TOKEN }}
           path: private-repo
 
-      - name: Prepare epg folder and copy EPG files
+      - name: Copy only idn.xml.gz and guide.xml.gz to epg folder
         run: |
           mkdir -p epg
-          cp -v private-repo/guide/global/*.xml.gz epg/ || echo "No global XML files found"
-          cp -v private-repo/guide/local/*.xml.gz epg/ || echo "No local XML files found"
+          cp -v private-repo/guide/global/guide.xml.gz epg/ || echo "guide.xml.gz not found"
+          cp -v private-repo/guide/global/idn.xml.gz epg/ || echo "idn.xml.gz not found"
           ls -lh epg
 
-      - name: Commit and Push changes if any
+      - name: Commit and push changes if any
         run: |
           git config user.name "alkhalifitv"
           git config user.email "backtrack512@gmail.com"
           git add epg/
-          git commit -m "Update guide.xml.gz from private repo" --no-verify || echo "No changes to commit"
+          git diff --cached --quiet || git commit -m "Update selected EPG files from private repo" --no-verify
           git push origin master
 
       - name: Setup GitHub Pages

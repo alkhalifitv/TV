@@ -1,38 +1,46 @@
-name: deploy-to-github-pages
+name: Update and Deploy EPG every 2 days
 
 on:
-  push:
-    branches: [ master ] # ganti ke "main" jika nama branch kamu bukan "master"
+  schedule:
+    - cron: '0 5 */2 * *'   # Jalan tiap 2 hari sekali tengah malam
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  update-epg:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout this repo
+      - name: Checkout public repo (this repo)
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Checkout private repo (alkhalifitv.github.io)
+        uses: actions/checkout@v4
+        with:
+          repository: alkhalifitv/alkhalifitv.github.io
+          token: ${{ secrets.EPG_TOKEN }}
+          path: private-repo
 
-      - name: Prepare epg folder
+      - name: Copy EPG files from private repo to epg folder
         run: |
           mkdir -p epg
-          cp -v global/*.xml.gz epg/ 2>/dev/null || echo "No global XML files to copy"
-          cp -v local/*.xml.gz epg/ 2>/dev/null || echo "No local XML files to copy"
-          ls -lh epg || echo "Folder epg is empty"
+          cp -v private-repo/guide/global/*.xml.gz epg/ || echo "No global XML files found in private repo"
+          cp -v private-repo/guide/local/*.xml.gz epg/ || echo "No local XML files found in private repo"
+          ls -lh epg
+
+      - name: Commit and push changes if any
+        run: |
+          git config user.name "alkhalifitv"
+          git config user.email "backtrack512@gmail.com"
+          git add epg/
+          git diff --cached --quiet || git commit -m "Update EPG from private repo" --no-verify
+          git push origin master
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

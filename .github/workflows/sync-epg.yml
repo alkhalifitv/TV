@@ -2,7 +2,7 @@ name: Update EPG from Private Repo
 
 on:
   schedule:
-    - cron: '0 0 * * *' # setiap hari tengah malam, bisa disesuaikan
+    - cron: '0 0 */2 * *' # setiap hari tengah malam, bisa disesuaikan
   workflow_dispatch:
 
 permissions:

@@ -31,10 +31,14 @@ jobs:
           cp -r logo deploy/ || echo "No logo folder found"
           cp -r playlist deploy/ || echo "No playlist folder found"
           cp -r big deploy/ || echo "No big folder found"
-          # Tambah folder lain yang mau di-include, misal:
-          # cp -r other_folder deploy/ || echo "No other_folder"
+          cp README.md deploy/ || echo "No README.md found"
 
-      - name: Generate index.html for deploy folder
+      - name: Convert README.md to index.html
+        run: |
+          pip install markdown
+          markdown deploy/README.md > deploy/index.html || echo "Failed to convert README.md"
+
+      - name: Generate index.html for deploy folder (listing files)
         run: |
           python3 scripts/gen_index.py
 

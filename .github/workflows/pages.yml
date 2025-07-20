@@ -2,7 +2,7 @@ name: deploy-to-github-pages
 
 on:
   push:
-    branches: [ master ] # atau main, tergantung nama branch kamu
+    branches: [ master ] # ganti ke "main" jika nama branch kamu bukan "master"
   workflow_dispatch:
 
 permissions:
@@ -28,10 +28,10 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3  # ✅ versi baru, fix error
         with:
-          path: './epg' # pastikan file XML.gz masuk ke folder ini
+          path: './epg'  # ⬅️ pastikan file XML.gz hasil generate ada di sini
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4  # ✅ versi baru

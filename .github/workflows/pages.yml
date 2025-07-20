@@ -1,46 +1,38 @@
-name: Update and Deploy EPG every 2 days
+name: deploy-to-github-pages
 
 on:
-  schedule:
-    - cron: '0 5 */2 * *'   # Jalan tiap 2 hari sekali tengah malam
+  push:
+    branches: [ master ]
+    paths:
+      - 'epg/**'         
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  update-epg:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout public repo (this repo)
+      - name: Checkout this repo
         uses: actions/checkout@v4
 
-      - name: Checkout private repo (alkhalifitv.github.io)
-        uses: actions/checkout@v4
-        with:
-          repository: alkhalifitv/alkhalifitv.github.io
-          token: ${{ secrets.EPG_TOKEN }}
-          path: private-repo
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: Copy EPG files from private repo to epg folder
+      - name: Prepare epg folder
         run: |
           mkdir -p epg
-          cp -v private-repo/guide/global/*.xml.gz epg/ || echo "No global XML files found in private repo"
-          cp -v private-repo/guide/local/*.xml.gz epg/ || echo "No local XML files found in private repo"
-          ls -lh epg
-
-      - name: Commit and push changes if any
-        run: |
-          git config user.name "alkhalifitv"
-          git config user.email "backtrack512@gmail.com"
-          git add epg/
-          git diff --cached --quiet || git commit -m "Update EPG from private repo" --no-verify
-          git push origin master
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v4
+          ls -lh epg || echo "Folder epg is empty"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

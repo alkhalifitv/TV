@@ -2,7 +2,7 @@ name: Update dan Deploy EPG setiap 2 hari
 
 on:
   schedule:
-    - cron: '0 5 */2 * *'   # Jalan tiap 2 hari
+    - cron: '30 20 */2 * *'   # Jalan tiap 2 hari
   workflow_dispatch:
 
 permissions:

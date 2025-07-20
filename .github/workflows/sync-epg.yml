@@ -1,0 +1,30 @@
+name: Sync EPG from private repo
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # Setiap 6 jam
+  workflow_dispatch:
+
+jobs:
+  sync-epg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo ini
+        uses: actions/checkout@v4
+
+      - name: Clone repo private epg
+        run: |
+          git clone https://alkhalifitv:${{ secrets.EPG_TOKEN }}@github.com/alkhalifitv/epg.git epg-private
+
+      - name: Salin file XML.gz ke folder publik
+        run: |
+          mkdir -p epg
+          cp -v epg-private/guide/global/idn.xml.gz epg/idn.xml.gz
+
+      - name: Commit perubahan
+        run: |
+          git config user.name "alkhalifitv"
+          git config user.email "backtrack512@gmail.com"
+          git add epg/idn.xml.gz
+          git commit -m "Sync EPG from private repo" --no-verify || echo "Nothing to commit"
+          git push

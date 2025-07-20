@@ -1,27 +1,21 @@
 import os
 
-def generate_index(path):
-    items = sorted(os.listdir(path), key=lambda x: x.lower())
-    lines = ['<html><body><h2>Index of {}</h2><ul>'.format(path)]
-    if path != '.':
-        parent = os.path.relpath(os.path.join(path, '..'), '.')
-        lines.append(f'<li><a href="{parent}/">../ (parent dir)</a></li>')
+def generate_index_html(folder_path='deploy'):
+    ignore = {'.git', '.github', '.gitignore', '.DS_Store'}
+    items = sorted(os.listdir(folder_path))
+    html = ['<html><head><title>Index of TV Repo</title></head><body>']
+    html.append('<h2>Index of /</h2><ul>')
     for item in items:
-        full_path = os.path.join(path, item)
-        if os.path.isdir(full_path):
-            lines.append(f'<li><a href="{item}/">{item}/</a></li>')
-        else:
-            lines.append(f'<li><a href="{item}">{item}</a></li>')
-    lines.append('</ul></body></html>')
-    with open(os.path.join(path, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write('\n'.join(lines))
-
-def walk_and_generate(root='.'):
-    for dirpath, dirnames, filenames in os.walk(root):
-        # skip .git and .github folders biar gak bikin indexnya
-        if '.git' in dirpath or '.github' in dirpath:
+        if item in ignore:
             continue
-        generate_index(dirpath)
+        full_path = os.path.join(folder_path, item)
+        display_name = item + '/' if os.path.isdir(full_path) else item
+        href = item + ('/' if os.path.isdir(full_path) else '')
+        html.append(f'<li><a href="{href}">{display_name}</a></li>')
+    html.append('</ul></body></html>')
+
+    with open(os.path.join(folder_path, 'index.html'), 'w') as f:
+        f.write('\n'.join(html))
 
 if __name__ == '__main__':
-    walk_and_generate()
+    generate_index_html()

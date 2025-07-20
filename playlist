@@ -1,4 +1,4 @@
-#EXTM3U x-tvg-url="https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/epg.xml, https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/indonesia.xml, https://www.open-epg.com/files/indonesia2.xml, https://www.open-epg.com/files/indonesia4.xml, "refresh="1440" max-conn="1" refresh="24"
+#EXTM3U x-tvg-url="https://alkhalifitv.github.io/TV/epg/guide.xml.gz, https://alkhalifitv.github.io/TV/epg/idn.xml.gz"refresh="1440" max-conn="1" refresh="24"
 
 #EXTINF:-1 tvg-id="TransTV.id" tvg-name="Trans TV" tvg-logo="https://alkhalifitv.github.io/TV/big/transtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",TRANS TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
@@ -99,10 +99,6 @@ http://op-group1-swiftservehd-1.dens.tv/h/h207/index.m3u8
 #EXTVLCOPT:http-referrer=https://www.indihometv.com/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 https://cdn08jtedge.indihometv.com/dassdvr/134/mentaritv/manifest.mpd
-
-#EXTINF:-1 tvg-id="atv.id" tvg-name="atv" tvg-logo="http://alkhalifitv.github.io/TV/big/atv.png" group-title="HIBURAN",ATV
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-https://streaming.indihometv.com/atm/DASH/atv/manifest.mpd
 
 #EXTINF:-1 tvg-id="iNews.id" tvg-name="iNews" tvg-logo="http://alkhalifitv.github.io/TV/big/inews.png" group-title="LOKAL",INEWS
 #KODIPROP:inputstreamaddon=inputstream.adaptive

@@ -1,4 +1,4 @@
-name: Deploy Full TV Repo to GitHub Pages
+name: Deploy Full TV Repo ke GitHub
 
 on:
   push:

@@ -1,8 +1,8 @@
-name: deploy-to-github-pages
+name: Auto Deploy GitHub Pages
 
 on:
   push:
-    branches: [ master ] # Ganti kalau pakai main
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
@@ -16,21 +16,40 @@ concurrency:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout this repo
+      - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Generate index.html
+        run: |
+          cat > index.html <<EOF
+          <!DOCTYPE html>
+          <html>
+          <head><meta charset="UTF-8"><title>EPG Index</title></head>
+          <body>
+            <h1>📺 EPG & Playlist</h1>
+            <ul>
+              <li><a href="epg/guide.xml.gz">guide.xml.gz</a></li>
+              <li><a href="epg/idn.xml.gz">idn.xml.gz</a></li>
+              <li><a href="playlist">Playlist (m3u)</a></li>
+              <li><a href="logo">Logo Folder</a></li>
+            </ul>
+          </body>
+          </html>
+          EOF
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './'  # Kirim semua file di repo
+          path: '.'  # deploy semua isi repo termasuk index.html
 
       - name: Deploy to GitHub Pages
         id: deployment

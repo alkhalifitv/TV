@@ -2,7 +2,7 @@
 playlist tv, 
 Unuk kodi, tvirl, tvmate, ottnavigator. 
 
-Playlist [Di SINI](https://raw.githubusercontent.com/alkhalifitv/TV/master/playlist.m3u8)
+Playlist [Di SINI](https://raw.githubusercontent.com/alkhalifitv/TV/master/playlist.m3u)
 
 # BUKAN UNTUK DI JUAL!!, "NOT 4 SALE!!" 
 untuk pemakaian sendiri saja

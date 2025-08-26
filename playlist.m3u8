@@ -247,8 +247,13 @@ https://atemecdnbalancer-voe.sysln.id/live/eds/CelestialMoviesHD/mpd/CelestialMo
 http://cdn4.skygo.mn/live/disk1/Lotus/HLS-FTA/Lotus.m3u8
 
 #EXTINF:-1 tvg-id="Thrill.hk" tvg-name="Thrill" tvg-logo="https://alkhalifitv.github.io/TV/big/thrill.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",Thrill
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservesd-1.dens.tv/s/s34/01.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTVLCOPT:http-referrer=https://visionplus.id
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT--http-reconnect=true
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3ffab3471a994535bdf7fc663792f08b:6e82876474df025c39ae804ba738ff17
+https://d2tjypxxy769fn.cloudfront.net/out/v1/3c619ecc120b46e999d1eaa627cc544f/index.mpd
 
 #EXTINF:-1 tvg-id="CinemaWorld.my" tvg-name="CinemaWorld" tvg-logo="https://alkhalifitv.github.io/TV/big/cinemaworld.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",CinemaWorld HD
 #KODIPROP:inputstreamaddon=inputstream.adaptive 

@@ -289,7 +289,7 @@ http://op-group1-swiftservehd-1.dens.tv/h/h16/01.m3u8
 http://op-group1-swiftservehd-1.dens.tv/h/h09/01.m3u8
 
 #EXTINF:-1 tvg-id="FashionTVAsia.fr" tvg-name="FashionTV Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/fashiontv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/gayahidup.png" group-title="GAYA HIDUP",FashionTV HD
-https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_new_york_9dd_43432_default_1596_hls.smil/playlist.m3u8
+https://ftv1.b-cdn.net/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8
 
 #EXTINF:-1 tvg-id="FashionTVMidnightSecrets.fr" tvg-name="Fashion TV Midnight Secrets" tvg-logo="https://alkhalifitv.github.io/TV/big/fashion_mid.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/gayahidup.png" group-title="GAYA HIDUP",FashionTV Midnight
 https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_midnite_k1y_27049_midnite_secr_108_hls.smil/media.m3u8

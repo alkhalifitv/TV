@@ -226,6 +226,13 @@ https://cdn08jtedge.indihometv.com/dassdvr/130/studiouniversal/manifest.mpd
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 http://cdn10jtedge.indihometv.com//atm/DASH/zbioskop/manifest.mpd
 
+#EXTVLCOPT:http-referrer=https://www.firstmedia.com
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=70d0197a8aca42589cf5df6daa576d86:ebd47832fd7251a09e3cc8eb36790ad5
+#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
+#EXTINF:-1 tvg-id="ZeeBioskop.id" tvg-name="ZeeBioskop.id" tvg-logo="http://alkhalifitv.github.io/TV/big/zbioskop.png" group-logo="http://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",ZEE BIOSKOP
+https://atemeshield1-voe.sysln.id/live/eds/ZeeBioskop/mediampd/ZeeBioskop.mpd
+
 #EXTINF:-1 tvg-id="mnc: CelestialClassicMovies.id" tvg-name="mnc: Celestial Classic Movies" tvg-logo="http://alkhalifitv.github.io/TV/big/ccm.png" group-title="FILM",Celestial Classic Movies
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; Google TV Streamer Build/UTT3.240625.001.K5; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.60 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://visionplus.id/   
@@ -279,13 +286,19 @@ http://op-group1-swiftservehd-1.dens.tv/h/h193/index.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 http://op-group1-swiftservehd-1.dens.tv/h/h18/01.m3u8
 
-#EXTINF:-1 tvg-id="RockExtreme.sg" tvg-name="Rock Action" tvg-logo="https://alkhalifitv.github.io/TV/big/rock_action.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",Rock Action
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h15/01.m3u8
+#EXTINF:-1 tvg-id="mnc: ROCkAction.sg" tvg-name="mnc: ROCK Action" tvg-logo="http://alkhalifitv.github.io/TV/big/rock_action.png" group-title="FILM",ROCK Action (dens)
+#EXTVLCOPT:http-referrer=https://www.firstmedia.com
+#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=99e736f170b148ffb16d0ad6c8f93ef4:d1b4737ab41f0daae733f11a4b84fa02
+https://atemecdnbalancer-voe.sysln.id/live/eds/RockExtremeHD/mediampd/RockExtremeHD.mpd
 
-#EXTINF:-1 tvg-id="ROCKEntertainment.sg" tvg-name="ROCK Entertainment" tvg-logo="https://alkhalifitv.github.io/TV/big/rock_ent.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/hiburan.png" group-title="HIBURAN",Rock Entertainment
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h16/01.m3u8
+#EXTINF:-1 tvg-id="mnc: RockEntertainment.sg" tvg-name="mnc: RockEntertainment.sg" tvg-logo="http://alkhalifitv.github.io/TV/big/rock_ent.png" group-logo="http://alkhalifitv.github.io/TV/logo/group/hiburan.png" group-title="HIBURAN",ROCK Entertainment (dens)
+#EXTVLCOPT:http-referrer=https://www.firstmedia.com
+#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=5468e719846d4dd4adc59e85312375e8:98566155c257462809a8705f5efd7819
+https://atemecdnbalancer-voe.sysln.id/live/eds/RockEntertainmentHD/mediampd/RockEntertainmentHD.mpd
 
 #EXTINF:-1 tvg-id="Motorvision.de" tvg-name="Motorvision" tvg-logo="https://alkhalifitv.github.io/TV/big/motorvision.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/olahraga.png" group-title="OLAH RAGA":http-user-agent="Mozilla/5.0 (Windows NT 6.2; Win64; x64;) Gecko/20100101 Firefox/20.0",Motorvision TV HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36

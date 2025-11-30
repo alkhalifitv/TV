@@ -168,7 +168,7 @@ https://hgmtv.com:19360/garudatvlivestreaming/720p.m3u8
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=955574ee2b674f0fbbad818fb384c233:51d2893619bdd062fb4c0cdaafefbf27
-#EXTINF:-1 tvg-id="CartoonotoAsia.uk"" tvg-name="Cartoonito Asia" tvg-logo="http://alkhalifitv.github.io/TV/big/cartoonito.png" group-title="ANAK",Cartoonito Asia HD
+#EXTINF:-1 tvg-id="CartoonotoAsia.uk"" tvg-name="Cartoonito Asia" tvg-logo="http://alkhalifitv.github.io/TV/big/cartoonito.png"  group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",Cartoonito Asia HD
 https://atemecdnbalancer-voe.sysln.id/live/eds/CartoonitoHD/mediampd/CartoonitoHD.mpd
 
 #EXTINF:-1 tvg-id="CartoonNetworkAsia.sg" tvg-name="Cartoon Network" tvg-logo="https://alkhalifitv.github.io/TV/big/cartoonnetwork.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",Cartoon Network
@@ -191,10 +191,10 @@ http://op-group1-swiftservesd-1.dens.tv/h/h191/index.m3u8
 #EXTVLCOPT:http-referrer=https://www.firstmedia.com
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=ecc5bc0e2dec4b9495db147278fb3904:ca86d9fdad6a8e9b1c13368d734e2095
-#EXTINF:-1 tvg-id="AnimaxAsia.sg" tvg-name="Animax Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/animax.png" group-title="ANAK",Animax Asia ID
+#EXTINF:-1 tvg-id="AnimaxAsia.sg" tvg-name="Animax Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/animax.png"  group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",Animax Asia ID
 https://atemecdnbalancer-voe.sysln.id/live/eds/AnimaxHD/mediampd/AnimaxHD.mpd
 
-#EXTINF:-1 tvg-id="AnimaxAsia.sg" tvg-name="Animax Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/animax.png" group-title="ANAK",Animax
+#EXTINF:-1 tvg-id="AnimaxAsia.sg" tvg-name="Animax Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/animax.png"  group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",Animax
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=edf1a715de9748638dd2fad75a419af2:2f5a3199b26e9b693ae881af7ff864cf

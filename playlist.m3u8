@@ -197,7 +197,7 @@ https://atemecdnbalancer-voe.sysln.id/live/eds/AnimaxHD/mediampd/AnimaxHD.mpd
 https://tglmp01.akamaized.net/out/v1/de55fad9216e4fe7ad8d2eed456ba1ec/manifest.mpd
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={"3dd653fc7aa1e3075b7f0233620df68f":"8573791fa55bff03a3094ff559fc1407"}
+#KODIPROP:inputstream.adaptive.license_key=3dd653fc7aa1e3075b7f0233620df68f:8573791fa55bff03a3094ff559fc1407
 #EXTINF:-1 tvg-id="Aniplus.sg" tvg-name="Aniplus Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/aniplus.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",ANIPLUS
 https://slive.mana2.my/AniPlus/index.mpd
 

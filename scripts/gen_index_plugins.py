@@ -13,77 +13,65 @@ OUTPUT = Path("deploy/index.html")
 # ===============================
 plugins = json.loads(PLUGINS_JSON.read_text(encoding="utf-8"))
 
-rows = []
+plugin_rows = []
 for p in plugins:
-    rows.append(f"""
+    plugin_rows.append(f"""
     <tr>
-      <td><img src="{p['iconUrl']}" width="32"></td>
+      <td><img src="{p['iconUrl']}" width="28"></td>
       <td>
         <b>{p['name']}</b><br>
         <small>{p.get('description','')}</small>
       </td>
       <td>{p['version']}</td>
-      <td>{", ".join(p.get("tvTypes", []))}</td>
       <td>{", ".join(p.get("authors", []))}</td>
       <td><a href="{p['url']}">Download</a></td>
     </tr>
     """)
 
 # ===============================
-# DISCLAIMER
+# HTML Blocks
 # ===============================
-DISCLAIMER_HTML = """
-<div class="disclaimer">
-  <h2>📡 IPTV Repository</h2>
-  <p>
-    Playlist IPTV, EPG, dan Plugin untuk
-    <b>Kodi</b>, <b>TVIRL</b>, <b>TiviMate</b>, dan <b>OTT Navigator</b>.
-  </p>
-
-  <p class="warning">
-    ⚠️ BUKAN UNTUK DI JUAL!!<br>
-    ⚠️ NOT FOR SALE!!<br>
-    Untuk pemakaian pribadi / personal use only.
-  </p>
-
-  <p class="note">
-    Segala bentuk penjualan, rebrand, atau redistribusi tanpa izin
-    dilarang keras.
-  </p>
+DISCLAIMER = """
+<div class="card warning">
+  <b>⚠️ NOT FOR SALE</b><br>
+  Repo ini <b>bukan untuk dijual</b>.<br>
+  Hanya untuk pemakaian pribadi / personal use.
 </div>
 """
 
-# ===============================
-# DOWNLOADS
-# ===============================
-DOWNLOADS_HTML = """
-<div class="downloads">
-  <h2>⬇️ Downloads</h2>
-
-  <ul>
+IPTV_SECTION = """
+<div class="card">
+  <h2>📺 IPTV</h2>
+  <ul class="list">
     <li>
-      📅 <b>EPG Global</b><br>
-      <a href="epg/guide.xml.gz">guide.xml.gz</a><br>
-      <code>https://alkhalifitv.github.io/TV/epg/guide.xml.gz</code>
+      <b>EPG Global</b><br>
+      <a href="epg/guide.xml.gz">guide.xml.gz</a>
     </li>
-
     <li>
-      📅 <b>EPG Indonesia & Malaysia</b><br>
-      <a href="epg/idn.xml.gz">idn.xml.gz</a><br>
-      <code>https://alkhalifitv.github.io/TV/epg/idn.xml.gz</code>
+      <b>EPG Indonesia & Malaysia</b><br>
+      <a href="epg/idn.xml.gz">idn.xml.gz</a>
     </li>
-
     <li>
-      📺 <b>Playlist IPTV</b><br>
-      <a href="playlist.m3u8">playlist.m3u8</a><br>
-      <code>https://alkhalifitv.github.io/TV/playlist.m3u8</code>
+      <b>Playlist IPTV</b><br>
+      <a href="playlist.m3u8">playlist.m3u8</a>
     </li>
   </ul>
+</div>
+"""
 
-  <p class="note">
-    Gunakan URL di atas langsung di aplikasi IPTV
-    (Kodi, TVIRL, TiviMate, OTT Navigator).
-  </p>
+CLOUDSTREAM_SECTION = f"""
+<div class="card">
+  <h2>☁️ CloudStream / CS3 Plugins</h2>
+  <table>
+    <tr>
+      <th></th>
+      <th>Plugin</th>
+      <th>Version</th>
+      <th>Author</th>
+      <th></th>
+    </tr>
+    {''.join(plugin_rows)}
+  </table>
 </div>
 """
 
@@ -94,79 +82,40 @@ now = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
 html = f"""
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>IPTV Repository</title>
+<title>alkhalifitv</title>
 
 <style>
+:root {{
+  --bg: #0b1220;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --accent: #38bdf8;
+  --warn: #7f1d1d;
+}}
+
 body {{
-  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
   padding: 20px;
-  background: #f8fafc;
-  color: #0f172a;
 }}
 
 h1 {{
-  margin-bottom: 5px;
+  margin: 0 0 6px 0;
 }}
 
-.disclaimer {{
-  background: #fff4f4;
-  border: 2px solid #f87171;
-  padding: 18px;
-  margin: 20px 0;
-  border-radius: 10px;
-}}
-
-.warning {{
-  color: #b91c1c;
-  font-weight: bold;
-}}
-
-.note {{
-  font-size: 13px;
-  color: #334155;
-}}
-
-.downloads {{
-  background: #f1f5f9;
-  border: 1px solid #94a3b8;
-  padding: 16px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}}
-
-.downloads ul {{
-  padding-left: 18px;
-}}
-
-.downloads li {{
-  margin-bottom: 14px;
-}}
-
-table {{
-  border-collapse: collapse;
-  width: 100%;
-  background: white;
-}}
-
-th, td {{
-  border: 1px solid #cbd5f5;
-  padding: 8px;
-  text-align: left;
-}}
-
-th {{
-  background: #e2e8f0;
-}}
-
-img {{
-  vertical-align: middle;
+h2 {{
+  margin-top: 0;
 }}
 
 a {{
-  color: #2563eb;
+  color: var(--accent);
   text-decoration: none;
 }}
 
@@ -174,49 +123,74 @@ a:hover {{
   text-decoration: underline;
 }}
 
-code {{
-  background: #e5e7eb;
-  padding: 2px 6px;
-  border-radius: 5px;
-  font-size: 12px;
+small {{
+  color: var(--muted);
+}}
+
+.card {{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 18px;
+}}
+
+.warning {{
+  background: var(--warn);
+  border-color: #991b1b;
+}}
+
+.list {{
+  list-style: none;
+  padding-left: 0;
+}}
+
+.list li {{
+  margin-bottom: 10px;
+}}
+
+table {{
+  width: 100%;
+  border-collapse: collapse;
+}}
+
+th, td {{
+  border-bottom: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+}}
+
+th {{
+  color: var(--muted);
+  font-weight: normal;
+}}
+
+img {{
+  vertical-align: middle;
 }}
 
 .footer {{
   margin-top: 30px;
-  font-size: 12px;
-  color: #475569;
   text-align: center;
+  font-size: 12px;
+  color: var(--muted);
 }}
 </style>
-
 </head>
+
 <body>
 
-<h1>📺 IPTV Repository</h1>
-<p>Auto update via GitHub Actions • Last update: {now}</p>
+<h1>alkhalifitv</h1>
+<small>Auto update via GitHub Actions • {now}</small>
 
-{DISCLAIMER_HTML}
+{DISCLAIMER}
 
-{DOWNLOADS_HTML}
+{IPTV_SECTION}
 
-<h2>🔌 Plugin List</h2>
-
-<table>
-<tr>
-  <th>Icon</th>
-  <th>Plugin</th>
-  <th>Version</th>
-  <th>Type</th>
-  <th>Author</th>
-  <th>Download</th>
-</tr>
-
-{''.join(rows)}
-
-</table>
+{CLOUDSTREAM_SECTION}
 
 <div class="footer">
-  © alkhalifitv • Personal use only
+  © alkhalifitv — personal use only
 </div>
 
 </body>
@@ -229,4 +203,4 @@ code {{
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT.write_text(html, encoding="utf-8")
 
-print("✅ index.html + downloads + disclaimer berhasil dibuat")
+print("✅ index.html (dark + minimal) generated")

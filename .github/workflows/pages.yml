@@ -1,8 +1,8 @@
-name: Sync EPG dan Deploy ke GitHub Pages
+name: Sync EPG & CS3 lalu Deploy ke GitHub Pages
 
 on:
   schedule:
-    - cron: '30 22 */2 * *'   # Setiap 2 hari sekali jam 05:30 WIB
+    - cron: '30 22 */2 * *'   # Setiap 2 hari jam 05:30 WIB
   workflow_dispatch:
 
 permissions:
@@ -15,60 +15,105 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout public repo (repo ini)
+      # =========================================================
+      # 1️⃣ Checkout repo public (TV)
+      # =========================================================
+      - name: Checkout public repo
         uses: actions/checkout@v4
+        with:
+          ref: master
 
+      # =========================================================
+      # 2️⃣ Checkout repo private EPG
+      # =========================================================
       - name: Checkout private repo (EPG)
         uses: actions/checkout@v4
         with:
           repository: alkhalifitv/alkhalifitv.github.io
           token: ${{ secrets.EPG_TOKEN }}
-          path: private-repo
+          path: private-epg
 
-      - name: Copy EPG files ke folder epg/
+      - name: Copy EPG files
         run: |
           mkdir -p epg
-          cp -v private-repo/guide/global/guide.xml.gz epg/ || echo "guide.xml.gz not found"
-          cp -v private-repo/guide/global/idn.xml.gz epg/ || echo "idn.xml.gz not found"
+          cp -v private-epg/guide/global/guide.xml.gz epg/ || echo "guide.xml.gz not found"
+          cp -v private-epg/guide/global/idn.xml.gz epg/ || echo "idn.xml.gz not found"
           ls -lh epg
 
-      - name: Commit dan push jika ada perubahan
+      # =========================================================
+      # 3️⃣ Checkout repo private CS3
+      # =========================================================
+      - name: Checkout private repo (CS3)
+        uses: actions/checkout@v4
+        with:
+          repository: alkhalifitv/cloud-Extension
+          ref: builds
+          token: ${{ secrets.EPG_TOKEN }}
+          path: private-cs3
+
+      - name: Copy CS3 & plugins.json
+        run: |
+          mkdir -p cs3
+          cp -v private-cs3/*.cs3 cs3/ || echo "No cs3 files"
+          cp -v private-cs3/plugins.json cs3/ || echo "plugins.json not found"
+          ls -lh cs3
+
+      # =========================================================
+      # 4️⃣ Commit & Push jika ada perubahan
+      # =========================================================
+      - name: Commit dan push perubahan
         run: |
           git config user.name "alkhalifitv"
           git config user.email "backtrack512@gmail.com"
-          git add epg/
-          git diff --cached --quiet || git commit -m "Update EPG Berhasil " --no-verify
-          git push origin master
 
-      - name: Setup Python & Markdown
+          git add epg/ cs3/
+
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan"
+          else
+            git commit -m "Update EPG & CS3 otomatis"
+            git push origin master
+          fi
+
+      # =========================================================
+      # 5️⃣ Setup Python & Markdown
+      # =========================================================
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Install markdown untuk konversi README
+      - name: Install markdown
         run: pip install markdown
 
-      - name: Siapkan folder deploy
+      # =========================================================
+      # 6️⃣ Siapkan folder deploy
+      # =========================================================
+      - name: Prepare deploy folder
         run: |
           mkdir -p deploy
-          cp -r epg deploy/ || echo "No epg folder"
-          cp -r logo deploy/ || echo "No logo folder"
-          cp -r playlist deploy/ || echo "No playlist folder"
-          cp -r big deploy/ || echo "No big folder"
-          cp README.md deploy/ || echo "No README.md"
+          cp -r epg deploy/
+          cp -r cs3 deploy/
+          cp -r logo deploy/ 2>/dev/null || true
+          cp -r playlist deploy/ 2>/dev/null || true
+          cp -r big deploy/ 2>/dev/null || true
+          cp README.md deploy/ 2>/dev/null || true
 
       - name: Convert README.md ke index.html
         run: |
-          markdown deploy/README.md > deploy/index.html || echo "README convert failed"
+          if [ -f deploy/README.md ]; then
+            markdown deploy/README.md > deploy/index.html
+          else
+            echo "<h1>TV Repository</h1>" > deploy/index.html
+          fi
 
-      - name: Generate index listing dari isi deploy/
-        run: python3 scripts/gen_index.py
-
-      - name: Upload GitHub Pages artifact
+      # =========================================================
+      # 7️⃣ Upload & Deploy GitHub Pages
+      # =========================================================
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './deploy'
+          path: deploy
 
       - name: Deploy ke GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4

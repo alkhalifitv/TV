@@ -1,0 +1,170 @@
+[
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/AnimeSail.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 18051,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Hexated",
+            "alkhalifitv"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "OVA"
+        ],
+        "version": 11,
+        "internalName": "AnimeSail",
+        "url": "https://alkhalifitv.github.io/TV/cs3/AnimeSail.cs3",
+        "name": "AnimeSail"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Dubbindo.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 12593,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "alkhalifitv"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Cartoon",
+            "Anime"
+        ],
+        "version": 2,
+        "internalName": "Dubbindo",
+        "description": "Dubindo - Movie dubbing Indonesia",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Dubbindo.cs3",
+        "name": "Dubbindo"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Dutamovie.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 29010,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 13,
+        "internalName": "Dutamovie",
+        "description": "DutaMovie",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Dutamovie.cs3",
+        "name": "Dutamovie"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Idlix.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 23932,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Hexated",
+            "alkhalifitv"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime",
+            "AsianDrama"
+        ],
+        "version": 2,
+        "internalName": "Idlix",
+        "description": "Idlix - Movie subtitle Indonesia",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Idlix.cs3",
+        "name": "Idlix"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Klikxxi.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 18417,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 8,
+        "internalName": "Klikxxi",
+        "description": "Klikxxi",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Klikxxi.cs3",
+        "name": "Klikxxi"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/MovieBox.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 40487,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "alkhalifitv"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 4,
+        "internalName": "MovieBox",
+        "description": "Multi Language Movies and Series Provider",
+        "url": "https://alkhalifitv.github.io/TV/cs3/MovieBox.cs3",
+        "name": "MovieBox"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Netmirror.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 51224,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "alkhalifitv"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 42,
+        "internalName": "Netmirror",
+        "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Netmirror.cs3",
+        "name": "Netmirror"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Nomat.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 14694,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 4,
+        "internalName": "Nomat",
+        "description": "Nomat",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Nomat.cs3",
+        "name": "Nomat"
+    }
+]

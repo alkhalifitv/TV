@@ -2,7 +2,7 @@ name: Sync EPG & CS3 lalu Deploy ke GitHub Pages
 
 on:
   schedule:
-    - cron: '30 22 */2 * *'   # Setiap 2 hari jam 05:30 WIB
+    - cron: '30 22 */2 * *'
   workflow_dispatch:
 
 permissions:
@@ -36,9 +36,8 @@ jobs:
       - name: Copy EPG files
         run: |
           mkdir -p epg
-          cp -v private-epg/guide/global/guide.xml.gz epg/ || echo "guide.xml.gz not found"
-          cp -v private-epg/guide/global/idn.xml.gz epg/ || echo "idn.xml.gz not found"
-          ls -lh epg
+          cp -v private-epg/guide/global/guide.xml.gz epg/ || true
+          cp -v private-epg/guide/global/idn.xml.gz epg/ || true
 
       # =========================================================
       # 3️⃣ Checkout repo private CS3
@@ -51,15 +50,25 @@ jobs:
           token: ${{ secrets.EPG_TOKEN }}
           path: private-cs3
 
-      - name: Copy CS3 & plugins.json
+      - name: Copy CS3 files
         run: |
           mkdir -p cs3
-          cp -v private-cs3/*.cs3 cs3/ || echo "No cs3 files"
-          cp -v private-cs3/plugins.json cs3/ || echo "plugins.json not found"
-          ls -lh cs3
+          cp -v private-cs3/*.cs3 cs3/ || true
 
       # =========================================================
-      # 4️⃣ Commit & Push jika ada perubahan
+      # 4️⃣ Setup Python & AUTO REWRITE plugins.json
+      # =========================================================
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rewrite plugins.json ke versi PUBLIC
+        run: |
+          python3 scripts/rewrite_plugins.py
+
+      # =========================================================
+      # 5️⃣ Commit & Push jika ada perubahan
       # =========================================================
       - name: Commit dan push perubahan
         run: |
@@ -71,20 +80,9 @@ jobs:
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan"
           else
-            git commit -m "Update EPG & CS3 otomatis"
+            git commit -m "Update EPG & CS3 (public rewrite)"
             git push origin master
           fi
-
-      # =========================================================
-      # 5️⃣ Setup Python & Markdown
-      # =========================================================
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Install markdown
-        run: pip install markdown
 
       # =========================================================
       # 6️⃣ Siapkan folder deploy
@@ -95,13 +93,12 @@ jobs:
           cp -r epg deploy/
           cp -r cs3 deploy/
           cp -r logo deploy/ 2>/dev/null || true
-          cp -r playlist deploy/ 2>/dev/null || true
-          cp -r big deploy/ 2>/dev/null || true
           cp README.md deploy/ 2>/dev/null || true
 
       - name: Convert README.md ke index.html
         run: |
           if [ -f deploy/README.md ]; then
+            pip install markdown
             markdown deploy/README.md > deploy/index.html
           else
             echo "<h1>TV Repository</h1>" > deploy/index.html

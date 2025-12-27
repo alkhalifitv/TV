@@ -7,27 +7,26 @@ OUTPUT = Path("deploy/index.html")
 
 plugins = json.loads(PLUGINS_JSON.read_text(encoding="utf-8"))
 
-plugin_rows = []
+rows = []
 for p in plugins:
-    text = f"{p['name']} {p.get('description','')} {' '.join(p.get('authors',[]))}".lower()
-    plugin_rows.append(f"""
-    <tr data-search="{text}">
-      <td><img src="{p['iconUrl']}" width="26"></td>
-      <td>
-        <b>{p['name']}</b><br>
-        <small>{p.get('description','')}</small>
-      </td>
-      <td>{p['version']}</td>
-      <td>{", ".join(p.get("authors", []))}</td>
-      <td><a href="{p['url']}">Download</a></td>
-    </tr>
-    """)
+    search = f"{p['name']} {p.get('description','')} {' '.join(p.get('authors',[]))}".lower()
+    rows.append(f"""
+<tr data-search="{search}">
+  <td><img src="{p['iconUrl']}" width="26"></td>
+  <td>
+    <b>{p['name']}</b><br>
+    <small>{p.get('description','')}</small>
+  </td>
+  <td>{p['version']}</td>
+  <td>{", ".join(p.get("authors", []))}</td>
+  <td><a href="{p['url']}">Download</a></td>
+</tr>
+""")
 
 now = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
-html = f"""
-<!DOCTYPE html>
-<html>
+html = f"""<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>alkhalifitv</title>
@@ -54,31 +53,28 @@ html = f"""
 }}
 
 body {{
+  margin:0;
   background:var(--bg);
   color:var(--text);
   font-family:system-ui, sans-serif;
-  padding:20px;
 }}
 
 a {{ color:var(--accent); text-decoration:none; }}
 small {{ color:var(--muted); }}
 
-.card {{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:16px;
-  margin-bottom:18px;
-}}
-
-.warning {{
-  background:var(--warn);
+.header {{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:var(--bg);
+  padding:16px 20px 10px;
+  border-bottom:1px solid var(--border);
 }}
 
 .tabs {{
   display:flex;
   gap:10px;
-  margin:16px 0;
+  margin-top:10px;
 }}
 
 .tab-btn {{
@@ -95,8 +91,21 @@ small {{ color:var(--muted); }}
   color:white;
 }}
 
-.tab-content {{ display:none; }}
-.tab-content.active {{ display:block; }}
+.content {{
+  max-height:calc(100vh - 210px);
+  overflow-y:auto;
+  padding:20px;
+}}
+
+.card {{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:16px;
+}}
+
+.warning {{ background:var(--warn); }}
 
 button {{
   background:var(--border);
@@ -107,18 +116,15 @@ button {{
   cursor:pointer;
 }}
 
-button:hover {{
-  background:var(--accent);
-  color:white;
-}}
+button:hover {{ background:var(--accent); color:white; }}
 
 input {{
-  background:var(--card);
-  border:1px solid var(--border);
-  color:var(--text);
+  width:100%;
   padding:8px 12px;
   border-radius:10px;
-  width:100%;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
   margin-bottom:12px;
 }}
 
@@ -128,100 +134,146 @@ table {{
 }}
 
 th, td {{
-  border-bottom:1px solid var(--border);
   padding:8px;
+  border-bottom:1px solid var(--border);
 }}
 
 th {{ color:var(--muted); font-weight:normal; }}
 
+.tab-content {{ display:none; }}
+.tab-content.active {{ display:block; }}
+
 .footer {{
-  margin-top:30px;
   text-align:center;
   font-size:12px;
   color:var(--muted);
+  padding:12px;
 }}
+
+/* ===== MOBILE COMPACT ===== */
+.mobile .header {{ padding:12px 14px 8px; }}
+.mobile .tab-btn {{ padding:6px 12px; font-size:13px; }}
+.mobile .content {{ padding:12px; max-height:calc(100vh - 180px); }}
+.mobile table td, .mobile table th {{ font-size:13px; padding:6px; }}
+
+/* ===== POLL ===== */
+.poll-option {{ margin:10px 0; cursor:pointer; }}
+.bar {{ background:var(--border); border-radius:999px; height:8px; overflow:hidden; }}
+.bar div {{ height:100%; width:0%; background:var(--accent); transition:.3s; }}
 </style>
 
 <script>
 function switchTab(id) {{
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  document.getElementById('btn-' + id).classList.add('active');
+  document.getElementById('btn-'+id).classList.add('active');
   localStorage.setItem('tab', id);
 }}
 
 function toggleTheme() {{
   document.body.classList.toggle('light');
   localStorage.setItem('theme',
-    document.body.classList.contains('light') ? 'light' : 'dark');
+    document.body.classList.contains('light') ? 'light':'dark');
+}}
+
+function detectMobile() {{
+  document.body.classList.toggle('mobile', window.innerWidth <= 768);
 }}
 
 function copyUrl(path) {{
-  const url = location.origin + location.pathname.replace(/\\/[^\\/]*$/, '/') + path;
-  navigator.clipboard.writeText(url);
-  alert('Copied:\\n' + url);
+  const base = location.origin + location.pathname.replace(/\\/[^\\/]*$/, '/');
+  navigator.clipboard.writeText(base + path);
+  alert("Copied!");
 }}
 
 function searchPlugin(q) {{
-  q = q.toLowerCase();
-  document.querySelectorAll('#cloudstream tr[data-search]').forEach(r => {{
-    r.style.display = r.dataset.search.includes(q) ? '' : 'none';
-  }});
+  q=q.toLowerCase();
+  document.querySelectorAll('#cloudstream tr[data-search]')
+    .forEach(r=>r.style.display=r.dataset.search.includes(q)?'':'none');
 }}
 
-window.onload = () => {{
-  if (localStorage.getItem('theme') === 'light')
-    document.body.classList.add('light');
+/* ===== POLL ===== */
+const POLL_KEY="alkhalifitv_poll";
+function vote(c){{
+  let d=JSON.parse(localStorage.getItem(POLL_KEY))||{{iptv:0,cs:0,both:0,voted:false}};
+  if(d.voted)return;
+  d[c]++; d.voted=true;
+  localStorage.setItem(POLL_KEY,JSON.stringify(d));
+  renderPoll();
+}}
+function renderPoll(){{
+  let d=JSON.parse(localStorage.getItem(POLL_KEY));
+  if(!d)return;
+  let t=d.iptv+d.cs+d.both||1;
+  ['iptv','cs','both'].forEach(k=>{
+    document.getElementById('bar-'+k).style.width=(d[k]/t*100)+'%';
+  });
+}}
 
-  switchTab(localStorage.getItem('tab') || 'iptv');
-}};
+window.onload=()=>{
+  if(localStorage.getItem('theme')==='light')document.body.classList.add('light');
+  detectMobile();
+  renderPoll();
+  switchTab(localStorage.getItem('tab')||'iptv');
+}
+window.onresize=detectMobile;
 </script>
 </head>
 
 <body>
 
-<h1>alkhalifitv</h1>
-<small>Auto update • {now}</small>
+<div class="header">
+  <h1>alkhalifitv</h1>
+  <small>Auto update • {now}</small><br><br>
+  <button onclick="toggleTheme()">🌗 Theme</button>
 
-<div class="card warning">
-  <b>⚠️ NOT FOR SALE</b><br>
-  Repo ini <b>bukan untuk dijual</b> — personal use only
-</div>
-
-<button onclick="toggleTheme()">🌗 Toggle Theme</button>
-
-<div class="tabs">
-  <button id="btn-iptv" class="tab-btn" onclick="switchTab('iptv')">📺 IPTV</button>
-  <button id="btn-cloudstream" class="tab-btn" onclick="switchTab('cloudstream')">☁️ CloudStream</button>
+  <div class="tabs">
+    <button id="btn-iptv" class="tab-btn" onclick="switchTab('iptv')">📺 IPTV</button>
+    <button id="btn-cloudstream" class="tab-btn" onclick="switchTab('cloudstream')">☁️ CloudStream</button>
+  </div>
 </div>
 
 <div id="iptv" class="tab-content">
-  <div class="card">
-    <h2>📺 IPTV</h2>
+  <div class="content">
 
-    <p><b>EPG Global</b><br>
+    <div class="card poll">
+      <b>📊 Quick Poll</b>
+      <div class="poll-option" onclick="vote('iptv')">📺 IPTV<div class="bar"><div id="bar-iptv"></div></div></div>
+      <div class="poll-option" onclick="vote('cs')">☁️ CloudStream<div class="bar"><div id="bar-cs"></div></div></div>
+      <div class="poll-option" onclick="vote('both')">⭐ Keduanya<div class="bar"><div id="bar-both"></div></div></div>
+    </div>
+
+    <div class="card warning">
+      <b>⚠️ NOT FOR SALE</b><br>
+      Personal use only
+    </div>
+
+    <div class="card">
+      <p><b>EPG Global</b><br>
       <a href="epg/guide.xml.gz">Download</a>
       <button onclick="copyUrl('epg/guide.xml.gz')">Copy</button></p>
 
-    <p><b>EPG Indonesia & Malaysia</b><br>
+      <p><b>EPG Indonesia & Malaysia</b><br>
       <a href="epg/idn.xml.gz">Download</a>
       <button onclick="copyUrl('epg/idn.xml.gz')">Copy</button></p>
 
-    <p><b>Playlist IPTV</b><br>
+      <p><b>Playlist IPTV</b><br>
       <a href="playlist.m3u8">Download</a>
       <button onclick="copyUrl('playlist.m3u8')">Copy</button></p>
+    </div>
   </div>
 </div>
 
 <div id="cloudstream" class="tab-content">
-  <div class="card">
-    <h2>☁️ CloudStream Plugins</h2>
-    <input placeholder="Search plugin..." oninput="searchPlugin(this.value)">
-    <table>
-      <tr><th></th><th>Plugin</th><th>Version</th><th>Author</th><th></th></tr>
-      {''.join(plugin_rows)}
-    </table>
+  <div class="content">
+    <div class="card">
+      <input placeholder="Search plugin..." oninput="searchPlugin(this.value)">
+      <table>
+        <tr><th></th><th>Plugin</th><th>Version</th><th>Author</th><th></th></tr>
+        {''.join(rows)}
+      </table>
+    </div>
   </div>
 </div>
 
@@ -235,5 +287,4 @@ window.onload = () => {{
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT.write_text(html, encoding="utf-8")
-
-print("🔥 GOD MODE index.html generated")
+print("🔥 FINAL FULL VERSION generated")

@@ -56,19 +56,22 @@ jobs:
           cp -v private-cs3/*.cs3 cs3/ || true
 
       # =========================================================
-      # 4️⃣ Setup Python & AUTO REWRITE plugins.json
+      # 4️⃣ Setup Python
       # =========================================================
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Rewrite plugins.json ke versi PUBLIC
+      # =========================================================
+      # 5️⃣ Rewrite plugins.json ke versi PUBLIC
+      # =========================================================
+      - name: Rewrite plugins.json
         run: |
           python3 scripts/rewrite_plugins.py
 
       # =========================================================
-      # 5️⃣ Commit & Push jika ada perubahan
+      # 6️⃣ Commit & push jika ada perubahan
       # =========================================================
       - name: Commit dan push perubahan
         run: |
@@ -85,7 +88,7 @@ jobs:
           fi
 
       # =========================================================
-      # 6️⃣ Siapkan folder deploy
+      # 7️⃣ Prepare deploy folder
       # =========================================================
       - name: Prepare deploy folder
         run: |
@@ -93,19 +96,16 @@ jobs:
           cp -r epg deploy/
           cp -r cs3 deploy/
           cp -r logo deploy/ 2>/dev/null || true
-          cp README.md deploy/ 2>/dev/null || true
-
-      - name: Convert README.md ke index.html
-        run: |
-          if [ -f deploy/README.md ]; then
-            pip install markdown
-            markdown deploy/README.md > deploy/index.html
-          else
-            echo "<h1>TV Repository</h1>" > deploy/index.html
-          fi
 
       # =========================================================
-      # 7️⃣ Upload & Deploy GitHub Pages
+      # 8️⃣ Generate index.html plugin (AUTO)
+      # =========================================================
+      - name: Generate index plugin HTML
+        run: |
+          python3 scripts/gen_index_plugins.py
+
+      # =========================================================
+      # 9️⃣ Upload & Deploy GitHub Pages
       # =========================================================
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

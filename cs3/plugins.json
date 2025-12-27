@@ -1,5 +1,26 @@
 [
     {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/AnimeIndo.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 16118,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Hexated",
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "OVA",
+            "Anime"
+        ],
+        "version": 24,
+        "internalName": "AnimeIndo",
+        "url": "https://alkhalifitv.github.io/TV/cs3/AnimeIndo.cs3",
+        "name": "AnimeIndo"
+    },
+    {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/AnimeSail.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
@@ -171,6 +192,29 @@
         "description": "LayarKaca nonton movie streaming subtitle indonesia",
         "url": "https://alkhalifitv.github.io/TV/cs3/LayarKaca.cs3",
         "name": "LayarKaca"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/LayarWarna.png",
+        "jarFileSize": 100252,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 23105,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "LayarWarna",
+        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/LayarWarna.jar",
+        "description": "LayarWarna - Streaming Movie Sub Indo",
+        "url": "https://alkhalifitv.github.io/TV/cs3/LayarWarna.cs3",
+        "name": "LayarWarna"
     },
     {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/MovieBox.png",

@@ -8,7 +8,7 @@
         "language": "id",
         "authors": [
             "Hexated",
-            "alkhalifitv"
+            "Alkhalifitv"
         ],
         "tvTypes": [
             "AnimeMovie",
@@ -17,6 +17,7 @@
         ],
         "version": 11,
         "internalName": "AnimeSail",
+        "description": "AnimeMovie, Anime, OVA",
         "url": "https://alkhalifitv.github.io/TV/cs3/AnimeSail.cs3",
         "name": "AnimeSail"
     },
@@ -28,7 +29,7 @@
         "status": 1,
         "language": "id",
         "authors": [
-            "alkhalifitv"
+            "Alkhalifitv"
         ],
         "tvTypes": [
             "TvSeries",
@@ -59,7 +60,7 @@
         ],
         "version": 13,
         "internalName": "Dutamovie",
-        "description": "DutaMovie",
+        "description": "AsianDrama, TvSeries, Movie",
         "url": "https://alkhalifitv.github.io/TV/cs3/Dutamovie.cs3",
         "name": "Dutamovie"
     },
@@ -90,7 +91,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Kawanfilm.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 22080,
+        "fileSize": 22085,
         "status": 1,
         "language": "id",
         "authors": [
@@ -103,9 +104,30 @@
         ],
         "version": 4,
         "internalName": "Kawanfilm",
-        "description": "Kawanfilm",
+        "description": "Nonton Film Subtitle Indonesia",
         "url": "https://alkhalifitv.github.io/TV/cs3/Kawanfilm.cs3",
         "name": "Kawanfilm"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Kissasian.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 26880,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 3,
+        "internalName": "Kissasian",
+        "description": "Kiss Asian - SerialTV & Movie",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Kissasian.cs3",
+        "name": "Kissasian"
     },
     {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Klikxxi.png",
@@ -123,7 +145,7 @@
         ],
         "version": 8,
         "internalName": "Klikxxi",
-        "description": "Klikxxi",
+        "description": "Nonton Hiburan TvSeries & Movie",
         "url": "https://alkhalifitv.github.io/TV/cs3/Klikxxi.cs3",
         "name": "Klikxxi"
     },
@@ -158,7 +180,7 @@
         "status": 1,
         "language": "id",
         "authors": [
-            "alkhalifitv"
+            "Alkhalifitv"
         ],
         "tvTypes": [
             "Movie",
@@ -178,7 +200,7 @@
         "status": 1,
         "language": "id",
         "authors": [
-            "alkhalifitv"
+            "Alkhalifitv"
         ],
         "tvTypes": [
             "Movie",
@@ -230,7 +252,7 @@
         ],
         "version": 4,
         "internalName": "Nomat",
-        "description": "Nomat",
+        "description": "Nonton AsianDrama, TvSeries, Movie",
         "url": "https://alkhalifitv.github.io/TV/cs3/Nomat.cs3",
         "name": "Nomat"
     },

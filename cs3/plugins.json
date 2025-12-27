@@ -87,6 +87,27 @@
         "name": "Idlix"
     },
     {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Kawanfilm.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 22080,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 4,
+        "internalName": "Kawanfilm",
+        "description": "Kawanfilm",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Kawanfilm.cs3",
+        "name": "Kawanfilm"
+    },
+    {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Klikxxi.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
@@ -105,6 +126,29 @@
         "description": "Klikxxi",
         "url": "https://alkhalifitv.github.io/TV/cs3/Klikxxi.cs3",
         "name": "Klikxxi"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/LayarKaca.png",
+        "jarFileSize": 81566,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 19384,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 5,
+        "internalName": "LayarKaca",
+        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/LayarKaca.jar",
+        "description": "LayarKaca nonton movie streaming subtitle indonesia",
+        "url": "https://alkhalifitv.github.io/TV/cs3/LayarKaca.cs3",
+        "name": "LayarKaca"
     },
     {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/MovieBox.png",
@@ -147,6 +191,29 @@
         "name": "Netmirror"
     },
     {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Ngefilm.png",
+        "jarFileSize": 94156,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 21014,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "Ngefilm",
+        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/Ngefilm.jar",
+        "description": "Ngefilm - Streaming Movie and TV Series",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Ngefilm.cs3",
+        "name": "Ngefilm"
+    },
+    {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Nomat.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
@@ -166,5 +233,51 @@
         "description": "Nomat",
         "url": "https://alkhalifitv.github.io/TV/cs3/Nomat.cs3",
         "name": "Nomat"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Pusatfilm.png",
+        "jarFileSize": 74188,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 17937,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "Pusatfilm",
+        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/Pusatfilm.jar",
+        "description": "PusatFilm - Streaming Movie and TV Series",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Pusatfilm.cs3",
+        "name": "Pusatfilm"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Sarangfilm.png",
+        "jarFileSize": 123247,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 28529,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "Sarangfilm",
+        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/Sarangfilm.jar",
+        "description": "Sarangfilm - Streaming Movie and TV Series",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Sarangfilm.cs3",
+        "name": "Sarangfilm"
     }
 ]

@@ -7,10 +7,8 @@ OUTPUT = Path("deploy/index.html")
 plugins = json.loads(PLUGINS_JSON.read_text(encoding="utf-8"))
 
 cs_rows = []
-iptv_rows = []
-
 for p in plugins:
-    row = f"""
+    cs_rows.append(f"""
     <tr>
       <td><img src="{p.get('iconUrl','')}" width="28"></td>
       <td>
@@ -21,12 +19,7 @@ for p in plugins:
       <td>{", ".join(p.get("authors", []))}</td>
       <td><a href="{p.get('url','')}">Download</a></td>
     </tr>
-    """
-
-    if "iptv" in ",".join(p.get("tvTypes", [])).lower():
-        iptv_rows.append(row)
-    else:
-        cs_rows.append(row)
+    """)
 
 html = f"""<!DOCTYPE html>
 <html>
@@ -37,115 +30,66 @@ html = f"""<!DOCTYPE html>
 
 <style>
 :root {{
-  --bg: #ffffff;
-  --fg: #111;
-  --card: #f4f4f4;
-  --border: #ddd;
-  --accent: #007aff;
+  --bg:#ffffff; --fg:#111;
+  --card:#f4f4f4; --border:#ddd; --accent:#007aff;
 }}
-
 body.dark {{
-  --bg: #0f1115;
-  --fg: #eaeaea;
-  --card: #181b22;
-  --border: #2a2d36;
-  --accent: #4da3ff;
+  --bg:#0f1115; --fg:#eaeaea;
+  --card:#181b22; --border:#2a2d36; --accent:#4da3ff;
 }}
 
 body {{
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--fg);
+  margin:0; font-family:system-ui,sans-serif;
+  background:var(--bg); color:var(--fg);
 }}
 
 header {{
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding:14px 16px;
+  display:flex; justify-content:space-between; align-items:center;
 }}
 
 button {{
-  background: var(--card);
-  color: var(--fg);
-  border: 1px solid var(--border);
-  padding: 6px 12px;
-  border-radius: 8px;
-  cursor: pointer;
+  background:var(--card); color:var(--fg);
+  border:1px solid var(--border);
+  padding:6px 12px; border-radius:10px; cursor:pointer;
 }}
 
-.tabs {{
-  display: flex;
-  gap: 8px;
-  padding: 0 16px;
-}}
+.tabs {{ display:flex; gap:8px; padding:0 16px; }}
+.tabs button.active {{ background:var(--accent); color:#fff; }}
 
-.tabs button.active {{
-  background: var(--accent);
-  color: #fff;
-}}
-
-section {{
-  display: none;
-  padding: 16px;
-}}
-
-section.active {{
-  display: block;
-}}
+section {{ display:none; padding:16px; }}
+section.active {{ display:block; }}
 
 .card {{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 16px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:14px;
+  margin-bottom:14px;
 }}
 
-table {{
-  width: 100%;
-  border-collapse: collapse;
-}}
+table {{ width:100%; border-collapse:collapse; }}
+th,td {{ padding:8px; border-bottom:1px solid var(--border); }}
+th {{ text-align:left; opacity:.7; }}
 
-th, td {{
-  padding: 8px;
-  border-bottom: 1px solid var(--border);
-}}
-
-th {{
-  text-align: left;
-  opacity: .7;
-}}
-
-.poll-option {{
-  margin: 10px 0;
-  cursor: pointer;
-}}
-
+.poll-option {{ margin:10px 0; cursor:pointer; }}
 .bar {{
-  background: var(--border);
-  height: 8px;
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 4px;
+  background:var(--border); height:8px;
+  border-radius:999px; overflow:hidden; margin-top:4px;
 }}
+.bar div {{ height:100%; width:0%; background:var(--accent); }}
 
-.bar div {{
-  height: 100%;
-  width: 0%;
-  background: var(--accent);
+.disclaimer {{
+  background:var(--card);
+  border:1px dashed var(--border);
+  border-radius:12px;
+  padding:12px;
+  font-size:13px;
+  opacity:.85;
 }}
+.disclaimer b {{ color:var(--accent); }}
 
-.mobile table {{
-  font-size: 13px;
-}}
-
-footer {{
-  text-align: center;
-  padding: 16px;
-  opacity: .6;
-}}
+.mobile table {{ font-size:13px; }}
 </style>
 </head>
 
@@ -161,6 +105,7 @@ footer {{
   <button onclick="openTab('cs')">CloudStream</button>
 </div>
 
+<!-- ================= IPTV ================= -->
 <section id="iptv" class="active">
   <div class="card">
     <h3>📊 Quick Poll</h3>
@@ -192,74 +137,61 @@ footer {{
       <li><a href="playlist.m3u8">Playlist M3U</a></li>
     </ul>
   </div>
-
-  <div class="card">
-    <table>
-      <tr><th>Icon</th><th>Plugin</th><th>Version</th><th>Author</th><th></th></tr>
-      {''.join(iptv_rows)}
-    </table>
-  </div>
 </section>
 
+<!-- ================= CLOUDSTREAM ================= -->
 <section id="cs">
   <div class="card">
     <table>
-      <tr><th>Icon</th><th>Plugin</th><th>Version</th><th>Author</th><th></th></tr>
+      <tr>
+        <th>Icon</th><th>Plugin</th><th>Version</th><th>Author</th><th></th>
+      </tr>
       {''.join(cs_rows)}
     </table>
   </div>
 </section>
 
-<footer>
-BUKAN UNTUK DI JUAL · NOT 4 SALE · Pemakaian pribadi
-</footer>
+<!-- ================= DISCLAIMER ================= -->
+<div class="card disclaimer">
+  <b>⚠️ Disclaimer</b><br>
+  Playlist IPTV, EPG, dan plugin CloudStream di repo ini hanya untuk
+  <b>pemakaian pribadi</b>.<br>
+  <b>BUKAN UNTUK DI JUAL · NOT FOR SALE</b>
+</div>
 
 <script>
-const POLL_KEY = "alkhalifitv_poll";
+const POLL_KEY="alkhalifitv_poll";
 
-function toggleDark() {{
+function toggleDark(){{
   document.body.classList.toggle('dark');
-  localStorage.setItem('dark', document.body.classList.contains('dark'));
+  localStorage.setItem('dark',document.body.classList.contains('dark'));
 }}
+if(localStorage.getItem('dark')==='true')document.body.classList.add('dark');
 
-if (localStorage.getItem('dark') === 'true') {{
-  document.body.classList.add('dark');
-}}
-
-function openTab(id) {{
-  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+function openTab(id){{
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-
-  document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
   event.target.classList.add('active');
 }}
 
-function vote(choice) {{
-  let d = JSON.parse(localStorage.getItem(POLL_KEY)) || {{iptv:0,cs:0,both:0,voted:false}};
-  if (d.voted) {{
-    document.getElementById("poll-note").innerText = "✔ Kamu sudah vote";
-    return;
-  }}
-  d[choice]++;
-  d.voted = true;
-  localStorage.setItem(POLL_KEY, JSON.stringify(d));
-  renderPoll();
+function vote(choice){{
+  let d=JSON.parse(localStorage.getItem(POLL_KEY))||{{iptv:0,cs:0,both:0,voted:false}};
+  if(d.voted){{document.getElementById("poll-note").innerText="✔ Kamu sudah vote";return;}}
+  d[choice]++; d.voted=true;
+  localStorage.setItem(POLL_KEY,JSON.stringify(d)); renderPoll();
 }}
 
-function renderPoll() {{
-  let d = JSON.parse(localStorage.getItem(POLL_KEY));
-  if (!d) return;
-  let t = d.iptv + d.cs + d.both || 1;
-  ['iptv','cs','both'].forEach(k => {{
-    document.getElementById('bar-' + k).style.width = (d[k]/t*100) + '%';
+function renderPoll(){{
+  let d=JSON.parse(localStorage.getItem(POLL_KEY)); if(!d)return;
+  let t=d.iptv+d.cs+d.both||1;
+  ['iptv','cs','both'].forEach(k=>{{
+    document.getElementById('bar-'+k).style.width=(d[k]/t*100)+'%';
   }});
 }}
-
 renderPoll();
 
-if (window.innerWidth < 768) {{
-  document.body.classList.add('mobile');
-}}
+if(window.innerWidth<768)document.body.classList.add('mobile');
 </script>
 
 </body>
@@ -268,5 +200,4 @@ if (window.innerWidth < 768) {{
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT.write_text(html, encoding="utf-8")
-
-print("✅ index.html FULL VERSION berhasil dibuat")
+print("✅ FINAL index.html generated (clean + disclaimer boxed)")

@@ -1,4 +1,4 @@
-name: Sync EPG & CS3 lalu Deploy ke GitHub Pages
+name: Sync EPG & CS3
 
 on:
   schedule:

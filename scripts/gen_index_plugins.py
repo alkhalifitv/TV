@@ -38,7 +38,7 @@ DISCLAIMER_HTML = """
 
   <p>
     Playlist TV dan Plugin untuk
-    <b>Kodi</b>, <b>TVIRL</b>, <b>TiviMate</b>, dan <b>OTT Navigator</b>.
+    <b>CloudStream</b>, <b>Kodi</b>, <b>TVIRL</b>, <b>TiviMate</b>, dan <b>OTT Navigator</b>.
   </p>
 
   <p class="warning">

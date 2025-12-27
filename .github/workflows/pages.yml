@@ -1,7 +1,8 @@
-name: Sync EPG & CS3
+name: Sync EPG, Playlist & CS3
 
 on:
   schedule:
+    # Jalan tiap 2 hari jam 22:30 UTC
     - cron: '30 22 */2 * *'
   workflow_dispatch:
 
@@ -16,7 +17,7 @@ jobs:
 
     steps:
       # =========================================================
-      # 1️⃣ Checkout repo public (TV)
+      # 1️⃣ Checkout repo PUBLIC (TV)
       # =========================================================
       - name: Checkout public repo
         uses: actions/checkout@v4
@@ -24,7 +25,7 @@ jobs:
           ref: master
 
       # =========================================================
-      # 2️⃣ Checkout repo private EPG
+      # 2️⃣ Checkout repo PRIVATE EPG + Playlist
       # =========================================================
       - name: Checkout private repo (EPG)
         uses: actions/checkout@v4
@@ -33,14 +34,15 @@ jobs:
           token: ${{ secrets.EPG_TOKEN }}
           path: private-epg
 
-      - name: Copy EPG files
+      - name: Copy EPG & Playlist
         run: |
           mkdir -p epg
           cp -v private-epg/guide/global/guide.xml.gz epg/ || true
           cp -v private-epg/guide/global/idn.xml.gz epg/ || true
+          cp -v private-epg/playlist/playlist.m3u8 . || true
 
       # =========================================================
-      # 3️⃣ Checkout repo private CS3
+      # 3️⃣ Checkout repo PRIVATE CS3
       # =========================================================
       - name: Checkout private repo (CS3)
         uses: actions/checkout@v4
@@ -64,16 +66,16 @@ jobs:
           python-version: '3.12'
 
       # =========================================================
-      # 5️⃣ Rewrite plugins.json ke versi PUBLIC
+      # 5️⃣ Rewrite plugins.json (PRIVATE → PUBLIC)
       # =========================================================
       - name: Rewrite plugins.json
         run: |
           python3 scripts/rewrite_plugins.py
 
       # =========================================================
-      # 6️⃣ Commit & push jika ada perubahan
+      # 6️⃣ Commit & push jika ADA perubahan data
       # =========================================================
-      - name: Commit dan push perubahan
+      - name: Commit & push changes
         run: |
           git config user.name "alkhalifitv"
           git config user.email "backtrack512@gmail.com"
@@ -81,26 +83,27 @@ jobs:
           git add epg/ cs3/
 
           if git diff --cached --quiet; then
-            echo "Tidak ada perubahan"
+            echo "ℹ️ Tidak ada perubahan data"
           else
-            git commit -m "Update EPG & CS3 (public rewrite)"
+            git commit -m "Update EPG & CS3 (auto sync)"
             git push origin master
           fi
 
       # =========================================================
-      # 7️⃣ Prepare deploy folder
+      # 7️⃣ Prepare deploy folder (GitHub Pages)
       # =========================================================
       - name: Prepare deploy folder
         run: |
           mkdir -p deploy
           cp -r epg deploy/
           cp -r cs3 deploy/
+          cp playlist.m3u8 deploy/ || true
           cp -r logo deploy/ 2>/dev/null || true
 
       # =========================================================
-      # 8️⃣ Generate index.html plugin (AUTO)
+      # 8️⃣ Generate index.html (AUTO)
       # =========================================================
-      - name: Generate index plugin HTML
+      - name: Generate index.html
         run: |
           python3 scripts/gen_index_plugins.py
 
@@ -112,5 +115,5 @@ jobs:
         with:
           path: deploy
 
-      - name: Deploy ke GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4

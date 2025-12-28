@@ -88,10 +88,10 @@
     },
     {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Fufafilm.png",
-        "jarFileSize": 94503,
+        "jarFileSize": 94687,
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 20987,
+        "fileSize": 21083,
         "status": 1,
         "language": "id",
         "authors": [
@@ -136,7 +136,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Indomax.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 29298,
+        "fileSize": 23128,
         "status": 1,
         "language": "id",
         "authors": [
@@ -147,7 +147,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 5,
+        "version": 2,
         "internalName": "Indomax",
         "description": "IndoMax - AsianDrama, TvSeries, Movie",
         "url": "https://alkhalifitv.github.io/TV/cs3/Indomax.cs3",

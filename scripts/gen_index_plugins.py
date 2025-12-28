@@ -23,7 +23,7 @@ for p in plugins:
     public.append(p)
 
 (Path("cs3/plugins.json")).write_text(
-    json.dumps(public, indent=2, ensure_ascii=False),
+    json.dumps(public, indent=4, ensure_ascii=False),
     encoding="utf-8"
 )
 

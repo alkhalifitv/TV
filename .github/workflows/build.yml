@@ -1,0 +1,90 @@
+name: Sync & Deploy TV
+
+on:
+  schedule:
+    - cron: '30 22 */2 * *'   # jalan tiap 2 hari jam 22:30 WIB
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout public repo
+      uses: actions/checkout@v4
+
+    # ================= EPG =================
+    - name: Checkout private EPG
+      uses: actions/checkout@v4
+      with:
+        repository: alkhalifitv/alkhalifitv.github.io
+        token: ${{ secrets.EPG_TOKEN }}
+        path: private-epg
+
+    - name: Copy EPG
+      run: |
+        mkdir -p epg
+        cp private-epg/guide/global/guide.xml.gz epg/
+        cp private-epg/guide/global/idn.xml.gz epg/
+
+    # ================= CS3 =================
+    - name: Checkout private CS3
+      uses: actions/checkout@v4
+      with:
+        repository: alkhalifitv/cloud-Extension
+        ref: builds
+        token: ${{ secrets.EPG_TOKEN }}
+        path: private-cs3
+
+    - name: Copy CS3 files
+      run: |
+        mkdir -p cs3
+        cp private-cs3/*.cs3 cs3/
+
+    # ================= BUILD =================
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Generate plugins + repo + site
+      run: python3 scripts/generate_all.py
+
+    # ================= CLEAN =================
+    - name: Cleanup private folders
+      run: rm -rf private-epg private-cs3
+
+    # ================= COMMIT =================
+    - name: Commit changes
+      run: |
+        git config user.name "alkhalifitv"
+        git config user.email "backtrack512@gmail.com"
+        git add .
+        if git diff --cached --quiet; then
+          echo "No changes"
+        else
+          git commit -m "Auto sync EPG & CS3"
+          git push
+        fi
+
+    # ================= PAGES ARTIFACT =================
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

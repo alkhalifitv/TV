@@ -1,0 +1,9 @@
+{
+  "name": "alkhalifitv.github.io indonesia",
+  "description": "Cloudstream Indonesia Repo",
+  "iconUrl": "https://alkhalifitv.github.io/TV/logo/group/movies.png",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://alkhalifitv.github.io/TV/cs3/plugins.json"
+  ]
+}

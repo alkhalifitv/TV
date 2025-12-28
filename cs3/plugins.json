@@ -47,7 +47,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Dubbindo.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 13860,
+        "fileSize": 12593,
         "status": 1,
         "language": "id",
         "authors": [
@@ -87,6 +87,29 @@
         "name": "Dutamovie"
     },
     {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Fufafilm.png",
+        "jarFileSize": 94503,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 20987,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 2,
+        "internalName": "Fufafilm",
+        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/Fufafilm.jar",
+        "description": "Fufafilm - Streaming Movie and TV Series",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Fufafilm.cs3",
+        "name": "Fufafilm"
+    },
+    {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Idlix.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
@@ -108,6 +131,27 @@
         "description": "Idlix - Movie subtitle Indonesia",
         "url": "https://alkhalifitv.github.io/TV/cs3/Idlix.cs3",
         "name": "Idlix"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Indomax.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 29298,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 5,
+        "internalName": "Indomax",
+        "description": "IndoMax - AsianDrama, TvSeries, Movie",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Indomax.cs3",
+        "name": "Indomax"
     },
     {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Kawanfilm.png",

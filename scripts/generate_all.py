@@ -30,7 +30,7 @@ def generate_plugins():
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     PLUGINS_OUT.write_text(
-        json.dumps(public_plugins, indent=2, ensure_ascii=False),
+        json.dumps(public_plugins, indent=4, ensure_ascii=False),
         encoding="utf-8"
     )
     print("✅ plugins.json generated")

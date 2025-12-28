@@ -15,8 +15,9 @@
       "OVA",
       "Anime"
     ],
-    "version": 24,
+    "version": 25,
     "internalName": "AnimeIndo",
+    "description": "AnimeIndo - Streaming Anime Sub Indo",
     "url": "https://alkhalifitv.github.io/TV/cs3/AnimeIndo.cs3",
     "name": "AnimeIndo"
   },

@@ -104,7 +104,7 @@
         ],
         "version": 2,
         "internalName": "Fufafilm",
-        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/Fufafilm.jar",
+        "jarUrl": "https://alkhalifitv.github.io/TV/cs3/Fufafilm.jar",
         "description": "Fufafilm - Streaming Movie and TV Series",
         "url": "https://alkhalifitv.github.io/TV/cs3/Fufafilm.cs3",
         "name": "Fufafilm"
@@ -233,7 +233,7 @@
         ],
         "version": 5,
         "internalName": "LayarKaca",
-        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/LayarKaca.jar",
+        "jarUrl": "https://alkhalifitv.github.io/TV/cs3/LayarKaca.jar",
         "description": "LayarKaca nonton movie streaming subtitle indonesia",
         "url": "https://alkhalifitv.github.io/TV/cs3/LayarKaca.cs3",
         "name": "LayarKaca"
@@ -256,7 +256,7 @@
         ],
         "version": 1,
         "internalName": "LayarWarna",
-        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/LayarWarna.jar",
+        "jarUrl": "https://alkhalifitv.github.io/TV/cs3/LayarWarna.jar",
         "description": "LayarWarna - Streaming Movie Sub Indo",
         "url": "https://alkhalifitv.github.io/TV/cs3/LayarWarna.cs3",
         "name": "LayarWarna"
@@ -319,7 +319,7 @@
         ],
         "version": 1,
         "internalName": "Ngefilm",
-        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/Ngefilm.jar",
+        "jarUrl": "https://alkhalifitv.github.io/TV/cs3/Ngefilm.jar",
         "description": "Ngefilm - Streaming Movie and TV Series",
         "url": "https://alkhalifitv.github.io/TV/cs3/Ngefilm.cs3",
         "name": "Ngefilm"
@@ -363,7 +363,7 @@
         ],
         "version": 1,
         "internalName": "Pusatfilm",
-        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/Pusatfilm.jar",
+        "jarUrl": "https://alkhalifitv.github.io/TV/cs3/Pusatfilm.jar",
         "description": "PusatFilm - Streaming Movie and TV Series",
         "url": "https://alkhalifitv.github.io/TV/cs3/Pusatfilm.cs3",
         "name": "Pusatfilm"
@@ -386,7 +386,7 @@
         ],
         "version": 1,
         "internalName": "Sarangfilm",
-        "jarUrl": "https://raw.githubusercontent.com/alkhalifitv/cloud-Extension/builds/Sarangfilm.jar",
+        "jarUrl": "https://alkhalifitv.github.io/TV/cs3/Sarangfilm.jar",
         "description": "Sarangfilm - Streaming Movie and TV Series",
         "url": "https://alkhalifitv.github.io/TV/cs3/Sarangfilm.cs3",
         "name": "Sarangfilm"

@@ -136,7 +136,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Indomax.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 21288,
+        "fileSize": 21996,
         "status": 1,
         "language": "id",
         "authors": [
@@ -147,7 +147,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 3,
+        "version": 2,
         "internalName": "Indomax",
         "description": "IndoMax - AsianDrama, TvSeries, Movie",
         "url": "https://alkhalifitv.github.io/TV/cs3/Indomax.cs3",

@@ -45,6 +45,7 @@ jobs:
       run: |
         mkdir -p cs3
         cp private-cs3/*.cs3 cs3/
+        cp private-cs3/*.jar cs3/
 
     # ================= BUILD =================
     - name: Setup Python

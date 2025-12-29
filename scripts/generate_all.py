@@ -23,9 +23,21 @@ def generate_plugins():
         name = p.get("internalName") or p.get("name")
         if not name:
             continue
+
+        # rewrite public URLs
         p["url"] = f"{PUBLIC_BASE}/cs3/{name}.cs3"
         p["repositoryUrl"] = PUBLIC_REPO
         p["iconUrl"] = f"{PUBLIC_BASE}/logo/{name}.png"
+
+        # ===== JAR HANDLING (KRUSIAL) =====
+        jar_path = OUT_DIR / f"{name}.jar"
+        if jar_path.exists():
+            p["jarUrl"] = f"{PUBLIC_BASE}/cs3/{name}.jar"
+        else:
+            # hapus field jar kalau tidak ada filenya
+            p.pop("jarUrl", None)
+            p.pop("jarFileSize", None)
+
         public_plugins.append(p)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -33,7 +45,7 @@ def generate_plugins():
         json.dumps(public_plugins, indent=4, ensure_ascii=False),
         encoding="utf-8"
     )
-    print("✅ plugins.json generated")
+    print("✅ plugins.json generated (public)")
     return public_plugins
 
 

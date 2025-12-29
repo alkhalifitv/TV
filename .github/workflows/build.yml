@@ -2,7 +2,7 @@ name: Sync & Deploy TV
 
 on:
   schedule:
-    - cron: '30 22 */2 * *'   # jalan tiap 2 hari jam 22:30 WIB
+    - cron: '50 21 */2 * *'   # JAM 04:50 WIB (UTC+7)
   workflow_dispatch:
 
 permissions:
@@ -41,11 +41,26 @@ jobs:
         token: ${{ secrets.EPG_TOKEN }}
         path: private-cs3
 
-    - name: Copy CS3 files
+    - name: Copy CS3 files (SAFE)
       run: |
         mkdir -p cs3
+
+        # copy cs3
         cp private-cs3/*.cs3 cs3/
-        cp private-cs3/*.jar cs3/
+
+        # copy JAR plugin SAJA (skip jar build)
+        for f in private-cs3/*.jar; do
+          name=$(basename "$f")
+          case "$name" in
+            classes.jar|full.jar|gradle-wrapper.jar)
+              echo "Skip $name"
+              ;;
+            *)
+              echo "Copy $name"
+              cp "$f" cs3/
+              ;;
+          esac
+        done
 
     # ================= BUILD =================
     - name: Setup Python

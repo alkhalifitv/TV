@@ -88,10 +88,10 @@
     },
     {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Fufafilm.png",
-        "jarFileSize": 94687,
+        "jarFileSize": 112997,
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 21083,
+        "fileSize": 25182,
         "status": 1,
         "language": "id",
         "authors": [
@@ -136,7 +136,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Indomax.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 22136,
+        "fileSize": 24050,
         "status": 1,
         "language": "id",
         "authors": [

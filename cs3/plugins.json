@@ -87,6 +87,27 @@
         "name": "Dutamovie"
     },
     {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/Filmlokal.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 22263,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "Filmlokal",
+        "description": "Film Lokal - Nonton Film Subtitle Indonesia",
+        "url": "https://alkhalifitv.github.io/TV/cs3/Filmlokal.cs3",
+        "name": "Filmlokal"
+    },
+    {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Fufafilm.png",
         "jarFileSize": 112997,
         "apiVersion": 1,
@@ -265,7 +286,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/MovieBox.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 40487,
+        "fileSize": 40801,
         "status": 1,
         "language": "id",
         "authors": [

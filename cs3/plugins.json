@@ -69,7 +69,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Dutamovie.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 29010,
+        "fileSize": 30460,
         "status": 1,
         "language": "id",
         "authors": [
@@ -87,10 +87,31 @@
         "name": "Dutamovie"
     },
     {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/FilmKita.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 25118,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 2,
+        "internalName": "FilmKita",
+        "description": "Film Kita - Nonton Film Subtitle Indonesia",
+        "url": "https://alkhalifitv.github.io/TV/cs3/FilmKita.cs3",
+        "name": "FilmKita"
+    },
+    {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Filmlokal.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 22263,
+        "fileSize": 23990,
         "status": 1,
         "language": "id",
         "authors": [
@@ -134,7 +155,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Idlix.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 23932,
+        "fileSize": 24561,
         "status": 1,
         "language": "id",
         "authors": [
@@ -157,7 +178,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Indomax.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 22990,
+        "fileSize": 24722,
         "status": 1,
         "language": "id",
         "authors": [
@@ -178,7 +199,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Kawanfilm.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 22085,
+        "fileSize": 28273,
         "status": 1,
         "language": "id",
         "authors": [
@@ -261,10 +282,10 @@
     },
     {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/LayarWarna.png",
-        "jarFileSize": 100252,
+        "jarFileSize": 78064,
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 23105,
+        "fileSize": 19611,
         "status": 1,
         "language": "id",
         "authors": [
@@ -281,6 +302,25 @@
         "description": "LayarWarna - Streaming Movie Sub Indo",
         "url": "https://alkhalifitv.github.io/TV/cs3/LayarWarna.cs3",
         "name": "LayarWarna"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/MaxMovie.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 24919,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "NSFW"
+        ],
+        "version": 1,
+        "internalName": "MaxMovie",
+        "description": "Premium porn with 4K support (use VPN if links not working)",
+        "url": "https://alkhalifitv.github.io/TV/cs3/MaxMovie.cs3",
+        "name": "MaxMovie"
     },
     {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/MovieBox.png",
@@ -306,7 +346,7 @@
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Netmirror.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 51224,
+        "fileSize": 51225,
         "status": 1,
         "language": "id",
         "authors": [
@@ -391,10 +431,10 @@
     },
     {
         "iconUrl": "https://alkhalifitv.github.io/TV/logo/Sarangfilm.png",
-        "jarFileSize": 123247,
+        "jarFileSize": 114862,
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/alkhalifitv/TV",
-        "fileSize": 28529,
+        "fileSize": 26406,
         "status": 1,
         "language": "id",
         "authors": [
@@ -411,5 +451,26 @@
         "description": "Sarangfilm - Streaming Movie and TV Series",
         "url": "https://alkhalifitv.github.io/TV/cs3/Sarangfilm.cs3",
         "name": "Sarangfilm"
+    },
+    {
+        "iconUrl": "https://alkhalifitv.github.io/TV/logo/SaveFilm.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/alkhalifitv/TV",
+        "fileSize": 25095,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Alkhalifitv"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "SaveFilm",
+        "description": "SaveFilm - AsianDrama, TvSeries, Movie",
+        "url": "https://alkhalifitv.github.io/TV/cs3/SaveFilm.cs3",
+        "name": "SaveFilm"
     }
 ]

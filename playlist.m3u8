@@ -9,7 +9,7 @@ https://video.detik.com/transtv/smil:transtv.smil/playlist.m3u8
 http://op-group1-swiftservehd-1.dens.tv/h/h40/index.m3u8
 
 #KODIPROP:inputstream.adaptive.license_type=rg.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=251c384e846841abafa1f7c723d57e66:e45b06a38cd261b74c5160f0912c042f
+#KODIPROP:inputstream.adaptive.license_key=c3004565365a42d08e3bde39a516d64e:dbfdc0967cfbbed01dba730c99d9c14a
 #EXTVLCOPT:http-referrer=https://www.visionplus.id
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0
 #EXTINF:-1 tvg-id="ANTV.id" tvg-name="ANTV.id" tvg-logo="https://alkhalifitv.github.io/TV/big/antv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",ANTV

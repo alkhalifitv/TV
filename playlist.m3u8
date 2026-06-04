@@ -95,9 +95,9 @@ https://d84q7nw4qf3j3.cloudfront.net/out/v1/703a71abac3844748b1e68166242d4f3/ind
 https://d2tjypxxy769fn.cloudfront.net/out/v1/7b0404cd6a8a4a908123f10774854e46/index.mpd
 
 #EXTINF:-1 tvg-id="iNews.id" tvg-name="iNews" tvg-logo="https://alkhalifitv.github.io/TV/big/inews.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",INEWS
-#EXTVLCOPT:http-user-agent=android-R+
+#EXTVLCOPT:http-user-agent=android-R+ (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1
 #EXTVLCOPT:http-referrer=https://www.rctiplus.com/
-https://inews-cutv.rctiplus.id/inews-sdi.m3u8
+https://r-plus.sedotcw3.workers.dev/index.m3u8?id=inews
 
 #EXTINF:-1 tvg-id="CNNIndonesia.id" tvg-name="CNN Indonesia" tvg-logo="https://alkhalifitv.github.io/TV/big/cnnindonesia.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",CNN Indonesia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36

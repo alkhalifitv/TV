@@ -68,12 +68,12 @@ https://d2tjypxxy769fn.cloudfront.net/out/v1/b8b9b1d5f80f45649b4a3619291551ab/in
 
 #EXTINF:-1 tvg-id="RajawaliTV.id" tvg-name="Rajawali TV" tvg-logo="https://alkhalifitv.github.io/TV/big/rtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",RTV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0 
-http://op-group1-swiftservehd-1.dens.tv/h/h10/index.m3u8
+https://op-flashcon-digdayahd-1.dens.tv/h/h10/index.m3u8
 
 #EXTINF:-1 tvg-id="MDTV.id" tvg-name="MDTV.id" tvg-logo="https://alkhalifitv.github.io/TV/big/mdtv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",MDTV
 #EXTVLCOPT:http-user-agent=DENSGO/3.00.00 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1
 #EXTVLCOPT:http-referrer=http://dens.tv
-http://op-group1-swiftservesd-1.dens.tv/h/h06/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h06/01.m3u8
 
 #EXTINF:-1 tvg-id="Moji.id" tvg-name="Moji" tvg-logo="http://alkhalifitv.github.io/TV/big/moji.png" group-title="LOKAL",MOJI
 #EXTVLCOPT:http-referrer=https://m.visionplus.id
@@ -119,11 +119,11 @@ http://btv.secureswiftcontent.com/han/btv/btv10005/srtoutput/manifest.m3u8
 
 #EXTINF:-1 tvg-id="KompasTV.id" tvg-name="Kompas TV" tvg-logo="https://alkhalifitv.github.io/TV/big/kompastv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",KOMPAS TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/s/s104/index.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/s/s104/index.m3u8
 
 #EXTINF:-1 tvg-id="MetroTV.id" tvg-name="Metro TV" tvg-logo="https://alkhalifitv.github.io/TV/big/metrotv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",METRO TV HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h12/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h12/01.m3u8
 
 #EXTINF:-1 tvg-id="JakTV.id" tvg-name="JAKTV" tvg-logo="https://alkhalifitv.github.io/TV/big/jaktv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL",JAKTV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
@@ -270,11 +270,11 @@ https://cdn08jtedge.indihometv.com/dassdvr/134/cinemaworld/manifest.mpd
 
 #EXTINF:-1 tvg-id="MyCinemaAsia.id" tvg-name="My Cinema Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/mycinemaasia.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",My Cinema Asia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h193/index.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h193/index.m3u8
 
 #EXTINF:-1 tvg-id="MyCinemaEurope.id" tvg-name="My Cinema Europe" tvg-logo="https://alkhalifitv.github.io/TV/big/mycinemaeurope.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",My Cinema Europe
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h18/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h18/01.m3u8
 
 #EXTINF:-1 tvg-id="mnc: ROCkAction.sg" tvg-name="mnc: ROCK Action" tvg-logo="http://alkhalifitv.github.io/TV/big/rock_action.png" group-title="FILM",ROCK Action (dens)
 #EXTVLCOPT:http-referrer=https://www.firstmedia.com
@@ -292,7 +292,7 @@ https://atemecdnbalancer-voe.sysln.id/live/eds/RockEntertainmentHD/mediampd/Rock
 
 #EXTINF:-1 tvg-id="Motorvision.de" tvg-name="Motorvision" tvg-logo="https://alkhalifitv.github.io/TV/big/motorvision.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/olahraga.png" group-title="OLAH RAGA":http-user-agent="Mozilla/5.0 (Windows NT 6.2; Win64; x64;) Gecko/20100101 Firefox/20.0",Motorvision TV HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h09/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h09/01.m3u8
 
 #EXTINF:-1 tvg-id="FashionTVAsia.fr" tvg-name="FashionTV Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/fashiontv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/gayahidup.png" group-title="GAYA HIDUP",FashionTV HD
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
@@ -302,30 +302,30 @@ https://atemecdnbalancer-voe.sysln.id/live/eds/FashionTV/mpd/FashionTV.mpd
 
 #EXTINF:-1 tvg-id="KIX.hk" tvg-name="KIX" tvg-logo="https://alkhalifitv.github.io/TV/big/kix.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/hiburan.png" group-title="HIBURAN",KIX
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h07/index.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h07/index.m3u8
 
 #EXTINF:-1 tvg-id="tvNAsia.hk" tvg-name="tvNAsia.hk" tvg-logo="https://alkhalifitv.github.io/TV/big/tvn.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/hiburan.png" group-title="HIBURAN",tvN Asia HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h20/index.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h20/index.m3u8
 
 #EXTINF:-1 tvg-id="tvNMoviesAsia.hk" tvg-name="tvNMoviesAsia.hk" tvg-logo="https://alkhalifitv.github.io/TV/big/tvnmovies.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",tvN Movies Asia HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h21/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h21/01.m3u8
 
 #EXTINF:-1 tvg-id="QuranTV.sa" tvg-id="Quran TV" tvg-logo="https://alkhalifitv.github.io/TV/big/aljazeera.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/religi.png" group-title="RELIGI",Quran-tv
 http://op-group1-swiftservesd-1.dens.tv/s/s28/01.m3u8
 
 #EXTINF:-1 tvg-id="AlJazeeraEnglish.qa" tvg-name="AlJazeeraEnglish.qa" tvg-logo="https://alkhalifitv.github.io/TV/big/aljazeera.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",Al Jazeera
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h143/S4/mnf.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h143/S4/mnf.m3u8
 
 #EXTINF:-1 tvg-id="NHKWorldJapan.jp" tvg-name="NHKWorldJapan.jp" tvg-logo="https://alkhalifitv.github.io/TV/big/nhkjapan.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",NHK World HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h23/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h23/01.m3u8
 
 #EXTINF:-1 tvg-id="TV5MondeAsia.fr" tvg-name="TV5MondeAsia.fr" tvg-logo="https://alkhalifitv.github.io/TV/big/tv5asie.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",TV5 Monde Asia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h312/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h312/01.m3u8
 
 #EXTINF:-1 tvg-id="DWEnglish.de" tvg-name="DW English" tvg-logo="https://alkhalifitv.github.io/TV/big/dw.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",DW English
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
@@ -337,11 +337,11 @@ http://op-group1-swiftservesd-1.dens.tv/s/s22/01.m3u8
 
 #EXTINF:-1 tvg-id="CNA.sg" tvg-name="CNA.sg" tvg-logo="https://alkhalifitv.github.io/TV/big/cna.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",CNA HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h29/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h29/01.m3u8
 
 #EXTINF:-1 tvg-id="TRTWorld.tr" tvg-name="TRTWorld.tr" tvg-logo="https://alkhalifitv.github.io/TV/big/trtworld.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",TRT WORLD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservehd-1.dens.tv/h/h156/S4/mnf.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h156/S4/mnf.m3u8
 
 #EXTINF:-1 tvg-id="mnc: beINSports1.id" tvg-name="mnc: beIN Sports 1" tvg-logo="http://alkhalifitv.github.io/TV/big/bein1.png" group-title="OLAH RAGA",beIN Sports 1
 #KODIPROP:inputstreamaddon=inputstream.adaptive

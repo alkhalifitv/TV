@@ -149,34 +149,11 @@ http://op-group1-swiftservesd-1.dens.tv/s/s182/index2.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 https://hgmtv.com:19360/garudatvlivestreaming/720p.m3u8
 
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=955574ee2b674f0fbbad818fb384c233:51d2893619bdd062fb4c0cdaafefbf27
-#EXTINF:-1 tvg-id="CartoonotoAsia.uk"" tvg-name="Cartoonito Asia" tvg-logo="http://alkhalifitv.github.io/TV/big/cartoonito.png"  group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",Cartoonito Asia HD
-https://atemecdnbalancer-voe.sysln.id/live/eds/CartoonitoHD/mediampd/CartoonitoHD.mpd
-
-#EXTINF:-1 tvg-id="CartoonNetworkAsia.sg" tvg-name="Cartoon Network" tvg-logo="https://alkhalifitv.github.io/TV/big/cartoonnetwork.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",Cartoon Network
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=12fee297311f4bab91367d0e9c3a0a2f:656071dbdffbda440a6fde4fda56de21
-https://atemecdnbalancer-voe.sysln.id/live/eds/CartoonNetWHD/mediampd/CartoonNetWHD.mpd
-
 #EXTINF:-1 tvg-id="IndiKids.id" tvg-name="IndiKids" tvg-logo="https://alkhalifitv.github.io/TV/big/funplanet.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",Indi Kids
 #EXTVLCOPT:http-referrer=https://www.indihometv.com/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 https://cdn10jtedge.indihometv.com/atm/DASH/indikids/manifest.mpd
-
-#EXTINF:-1 tvg-id="MyKidz.id" tvg-name="My Kidz" tvg-logo="https://alkhalifitv.github.io/TV/big/mykidz.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",My Kidz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservesd-1.dens.tv/h/h191/index.m3u8
-
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=ecc5bc0e2dec4b9495db147278fb3904:ca86d9fdad6a8e9b1c13368d734e2095
-#EXTINF:-1 tvg-id="AnimaxAsia.sg" tvg-name="Animax Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/animax.png"  group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",Animax Asia ID
-https://atemecdnbalancer-voe.sysln.id/live/eds/AnimaxHD/mediampd/AnimaxHD.mpd
 
 #EXTINF:-1 tvg-id="AnimaxAsia.sg" tvg-name="Animax Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/animax.png"  group-logo="https://alkhalifitv.github.io/TV/logo/group/anak.png" group-title="ANAK",Animax
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0
@@ -220,13 +197,6 @@ https://d84q7nw4qf3j3.cloudfront.net/out/v1/dc63bd198bc44193b570e0567ff5b22c/ind
 #EXTINF:-1 tvg-id="ZeeBioskop.id" tvg-name="ZeeBioskop.id" tvg-logo="http://alkhalifitv.github.io/TV/big/zbioskop.png" group-logo="http://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",ZEE BIOSKOP
 https://d2xz2v5wuvgur6.cloudfront.net/out/v1/81cb1af2ea4d4842a94f1c83957b4cd2/index.mpd
 
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=70d0197a8aca42589cf5df6daa576d86:ebd47832fd7251a09e3cc8eb36790ad5
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#EXTINF:-1 tvg-id="ZeeBioskop.id" tvg-name="ZeeBioskop.id" tvg-logo="http://alkhalifitv.github.io/TV/big/zbioskop.png" group-logo="http://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",ZEE BIOSKOP
-https://atemeshield1-voe.sysln.id/live/eds/ZeeBioskop/mediampd/ZeeBioskop.mpd
-
 #EXTINF:-1 tvg-id="mnc: CelestialClassicMovies.id" tvg-name="mnc: Celestial Classic Movies" tvg-logo="http://alkhalifitv.github.io/TV/big/ccm.png" group-title="FILM",Celestial Classic Movies
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; Google TV Streamer Build/UTT3.240625.001.K5; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.60 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://visionplus.id/   
@@ -245,13 +215,6 @@ https://d84q7nw4qf3j3.cloudfront.net/out/v1/6bdbe6ce7f034807aba5f09bed048b05/ind
 #EXTINF:-1 tvg-id="mnc: CelestialMoviesIndonesia.id" tvg-name="mnc: CelestialMoviesIndonesia.id" tvg-logo="http://alkhalifitv.github.io/TV/big/cm.png" group-title="FILM",Celestial Movies Indonesia (V+)
 https://d2xz2v5wuvgur6.cloudfront.net/out/v1/fd25e662b7154c60a94f7c061573ba2d/index.mpd
 
-#EXTINF:-1 tvg-id="mnc: CelestialMoviesIndonesia.id" tvg-name="mnc: CelestialMoviesIndonesia.id" tvg-logo="http://alkhalifitv.github.io/TV/big/cm.png" group-title="FILM",Celestial Movies Indonesia
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=c6bbd293f9604131961bf10ddd1d6d31:ff08a6c78c1d1414a1cfae760ab623a9
-https://atemecdnbalancer-voe.sysln.id/live/eds/CelestialMoviesHD/mediampd/CelestialMoviesHD.mpd
-
 #EXTINF:-1 tvg-id="Thrill.hk" tvg-name="Thrill" tvg-logo="https://alkhalifitv.github.io/TV/big/thrill.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",Thrill
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 #EXTVLCOPT:http-referrer=https://visionplus.id
@@ -268,52 +231,48 @@ https://d2tjypxxy769fn.cloudfront.net/out/v1/3c619ecc120b46e999d1eaa627cc544f/in
 #KODIPROP:inputstream.adaptive.license_key=69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a
 https://cdn08jtedge.indihometv.com/dassdvr/134/cinemaworld/manifest.mpd
 
-#EXTINF:-1 tvg-id="MyCinemaAsia.id" tvg-name="My Cinema Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/mycinemaasia.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",My Cinema Asia
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-flashcon-digdayahd-1.dens.tv/h/h193/index.m3u8
-
 #EXTINF:-1 tvg-id="MyCinemaEurope.id" tvg-name="My Cinema Europe" tvg-logo="https://alkhalifitv.github.io/TV/big/mycinemaeurope.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",My Cinema Europe
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 http://op-flashcon-digdayahd-1.dens.tv/h/h18/01.m3u8
 
 #EXTINF:-1 tvg-id="mnc: ROCkAction.sg" tvg-name="mnc: ROCK Action" tvg-logo="http://alkhalifitv.github.io/TV/big/rock_action.png" group-title="FILM",ROCK Action (dens)
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=99e736f170b148ffb16d0ad6c8f93ef4:d1b4737ab41f0daae733f11a4b84fa02
-https://atemecdnbalancer-voe.sysln.id/live/eds/RockExtremeHD/mediampd/RockExtremeHD.mpd
+#KODIPROP:inputstream.adaptive.license_key=d4126f7fd6134adfbedb3a0daefd7657:920f1adcca60069c887da7f1d225607d
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/ 
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/010bb28c19b64975b318d3b00f58b18b/index.mpd
 
 #EXTINF:-1 tvg-id="mnc: RockEntertainment.sg" tvg-name="mnc: RockEntertainment.sg" tvg-logo="http://alkhalifitv.github.io/TV/big/rock_ent.png" group-logo="http://alkhalifitv.github.io/TV/logo/group/hiburan.png" group-title="HIBURAN",ROCK Entertainment (dens)
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=5468e719846d4dd4adc59e85312375e8:98566155c257462809a8705f5efd7819
-https://atemecdnbalancer-voe.sysln.id/live/eds/RockEntertainmentHD/mediampd/RockEntertainmentHD.mpd
+#KODIPROP:inputstream.adaptive.license_key=a44cd51b688a458d97f534c286e58243:d62302543075463e472e23d7e947f10b
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/ 
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://d2tjypxxy769fn.cloudfront.net/out/v1/4cae4723d4d54a7fb71020bd7939a202/index.mpd
 
 #EXTINF:-1 tvg-id="Motorvision.de" tvg-name="Motorvision" tvg-logo="https://alkhalifitv.github.io/TV/big/motorvision.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/olahraga.png" group-title="OLAH RAGA":http-user-agent="Mozilla/5.0 (Windows NT 6.2; Win64; x64;) Gecko/20100101 Firefox/20.0",Motorvision TV HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 http://op-flashcon-digdayahd-1.dens.tv/h/h09/01.m3u8
-
-#EXTINF:-1 tvg-id="FashionTVAsia.fr" tvg-name="FashionTV Asia" tvg-logo="https://alkhalifitv.github.io/TV/big/fashiontv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/gayahidup.png" group-title="GAYA HIDUP",FashionTV HD
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=16ce4fb658cf41678c72cca871770da3:95509b2ad660b196310e93a0388a8a6b
-https://atemecdnbalancer-voe.sysln.id/live/eds/FashionTV/mpd/FashionTV.mpd
 
 #EXTINF:-1 tvg-id="KIX.hk" tvg-name="KIX" tvg-logo="https://alkhalifitv.github.io/TV/big/kix.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/hiburan.png" group-title="HIBURAN",KIX
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 http://op-flashcon-digdayahd-1.dens.tv/h/h07/index.m3u8
 
 #EXTINF:-1 tvg-id="tvNAsia.hk" tvg-name="tvNAsia.hk" tvg-logo="https://alkhalifitv.github.io/TV/big/tvn.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/hiburan.png" group-title="HIBURAN",tvN Asia HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-flashcon-digdayahd-1.dens.tv/h/h20/index.m3u8
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/ 
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2e8cbd6f664b4ace966d3edfad94c18e:cff33777777f7e61078ae2ae41ed0636
+https://d84q7nw4qf3j3.cloudfront.net/out/v1/6dc5412d26ea4e65961c825d866f2a34/index.mpd
 
 #EXTINF:-1 tvg-id="tvNMoviesAsia.hk" tvg-name="tvNMoviesAsia.hk" tvg-logo="https://alkhalifitv.github.io/TV/big/tvnmovies.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/film.png" group-title="FILM",tvN Movies Asia HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-flashcon-digdayahd-1.dens.tv/h/h21/01.m3u8
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/ 
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=17fb563c784848f09d8a1ea88a2fa989:1d0bd94eab5d5f56a950b784d9345439
+https://d2tjypxxy769fn.cloudfront.net/out/v1/096d5cf064294e7ea3a7f59ee2899669/index.mpd
 
 #EXTINF:-1 tvg-id="QuranTV.sa" tvg-id="Quran TV" tvg-logo="https://alkhalifitv.github.io/TV/big/aljazeera.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/religi.png" group-title="RELIGI",Quran-tv
-http://op-group1-swiftservesd-1.dens.tv/s/s28/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h15/01.m3u8
 
 #EXTINF:-1 tvg-id="AlJazeeraEnglish.qa" tvg-name="AlJazeeraEnglish.qa" tvg-logo="https://alkhalifitv.github.io/TV/big/aljazeera.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",Al Jazeera
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
@@ -329,11 +288,11 @@ http://op-flashcon-digdayahd-1.dens.tv/h/h312/01.m3u8
 
 #EXTINF:-1 tvg-id="DWEnglish.de" tvg-name="DW English" tvg-logo="https://alkhalifitv.github.io/TV/big/dw.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",DW English
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group2-swiftservesd-1.dens.tv/s/s11/S4/mnf.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h213/02.m3u8
 
 #EXTINF:-1 tvg-id="France24English.fr" tvg-name="France24English.fr" tvg-logo="https://alkhalifitv.github.io/TV/big/france24.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",France 24
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-group1-swiftservesd-1.dens.tv/s/s22/01.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h14/01.m3u8
 
 #EXTINF:-1 tvg-id="CNA.sg" tvg-name="CNA.sg" tvg-logo="https://alkhalifitv.github.io/TV/big/cna.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",CNA HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
@@ -341,7 +300,7 @@ http://op-flashcon-digdayahd-1.dens.tv/h/h29/01.m3u8
 
 #EXTINF:-1 tvg-id="TRTWorld.tr" tvg-name="TRTWorld.tr" tvg-logo="https://alkhalifitv.github.io/TV/big/trtworld.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/berita.png" group-title="BERITA",TRT WORLD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-http://op-flashcon-digdayahd-1.dens.tv/h/h156/S4/mnf.m3u8
+http://op-flashcon-digdayahd-1.dens.tv/h/h20/01.m3u8
 
 #EXTINF:-1 tvg-id="mnc: beINSports1.id" tvg-name="mnc: beIN Sports 1" tvg-logo="http://alkhalifitv.github.io/TV/big/bein1.png" group-title="OLAH RAGA",beIN Sports 1
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -367,19 +326,23 @@ https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/ind
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
 
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=e60ece8f0d9042fcb52508055ec48e5e:213f438bd4961cda987d41b7f154f1e5
 #EXTINF:-1 tvg-id="mnc: SPOTV.kr" tvg-name="mnc: SPOTV" tvg-logo="http://alkhalifitv.github.io/TV/big/spotv.png" group-title="OLAH RAGA",SPOTV HD
-https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTVHD/mediampd/SPOTVHD.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
 
-#EXTVLCOPT:http-referrer=https://www.firstmedia.com
-#EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=e6ed3fdf6e9f491d9ead109fc0b00cfc:3bc6c45722eb5fa7b343de9bffc4f7c7
 #EXTINF:-1 tvg-id="mnc: SPOTV2.kr" tvg-name="mnc: SPOTV 2" tvg-logo="http://alkhalifitv.github.io/TV/big/spotv2.png" group-title="OLAH RAGA",SPOTV2 HD
-https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTV2HD/mediampd/SPOTV2HD.mpd
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
+https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
 
 #EXTINF:-1 tvg-id="mnc: beINSports4.id" tvg-name="mnc: beIN Sports 4" tvg-logo="http://alkhalifitv.github.io/TV/big/bein4.png" group-title="OLAH RAGA",beIN Sports 4
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey

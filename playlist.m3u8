@@ -37,7 +37,7 @@ https://beetv.my.id/stream/vd.m3u8?ch=indosiar
 #EXTINF:-1 tvg-id="tv: RCTI.id" tvg-name="tv: RCTI" tvg-logo="http://alkhalifitv.github.io/TV/big/rcti.png" group-title="LOKAL",RCTI HD
 #EXTVLCOPT:http-user-agent=android-R+ (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1
 #EXTVLCOPT:http-referrer=https://www.rctiplus.com/
-https://r-plus.sedotcw3.workers.dev/index.m3u8?id=mnctv
+https://r-plus.sedotcw3.workers.dev/index.m3u8?id=rcti
 
 #EXTINF:-1 tvg-id="SCTV.id" tvg-name="SCTV HD" tvg-logo="https://alkhalifitv.github.io/TV/big/sctv.png" group-logo="https://alkhalifitv.github.io/TV/logo/group/lokal.png" group-title="LOKAL" ,SCTV
 https://cdnbal1.indihometv.com/atm/DASH/sctv/manifest.mpd
